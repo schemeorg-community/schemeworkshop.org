@@ -1,0 +1,823 @@
+-------------------------------------------------------------------------------
+Notes on running the Scheme Workshop				-*- outline -*-
+Olin Shivers
+2002/10/9
+
+(Emacs should display this document in outline mode. Say c-h m for
+instructions on how to move through it by sections (e.g., c-c c-n, c-c c-p).)
+
+I was the chairman for the Third Workshop on Scheme and Functional Programming
+(aka "Scheme 2002"), which was held in Pittsburgh on 2002/10/3. Although I had
+served on the program committees of several conferences, Scheme 2002 was my
+first experience actually running the whole show.
+
+This note is a somewhat rambling attempt to write down everything I learned
+from the experience, for the benefit of those who might get the job in the
+future. A lot of the things I'll say are sort of generally known -- learned by
+the osmotic process of watching others do things. In fact, if you haven't
+already been on enough program committees to have soaked up most of this stuff
+by observation, you probably shouldn't be running a workshop. But I'm going to
+go ahead and write some of them down to spell it all out.
+
+-----------------------------------------------------------------------
+* How to use these notes
+------------------------
+
+Sharing the load is not the only reason workshop responsibility is rotated --
+each different organiser brings something new to the event, and this keeps
+things fresh. So the point of these notes is not to set in concrete the form &
+function of a workshop. It's to equip you with lookahead and pre-packaged
+procedures to handle the particulars *in order* to free you up to inject your
+own ideas into the workshop. If you are wrestling with PostScript hacking or
+tripping over a deadline, you don't have cycles free to innovate. Don't
+reinvent the wheel -- use my design and move on to the turbocharger.
+
+So...
+  - slavishly follow all the items described below that fit your needs
+    exactly -- have no compunction about indulging in outright theft;
+  - tweak the things that are roughly appropriate;
+  - boldly innovate where you have ideas of your own.
+
+In this way, it's just like research.
+
+-------------------------------------------------------------------------------
+* One-year time line
+--------------------
+It goes like this:
+  - First you set the critical dates, assemble a program committee,
+    pick a guy to run the web server.
+  - Then you set up a web page.
+  - Then you write a Request for Workshop Proposal and get your workshop
+    approved by the sponsoring conference. You mention your PC & web url
+    in your RFW to show you have your act together.
+  - Your parent conference approves your RFW.
+  - then you write a call-for-papers and (after iterating over it with your
+    steering committee) web-publish-it/netnews-post-it/email-it-around.
+  - then you try to think of invited speakers, etc. (if you want them),
+  - and send the mini-TRMF budget paperwork (just one, easy page) to ACM.
+  - Then you remind people of the approaching paper-submission deadline.
+  - and start the personal lobbying to get people to submit papers,
+    at T-4weeks or T-6weeks.
+  - Submission-deadline day: get the papers. Make *sure* your web-server
+    acolyte is camped out by the web server tending its needs on this day.
+  - Deal the papers out to the PC.
+  - Cheerfully hound them into reviewing the papers. 
+    (And do your own reviewing.)
+  - Checkpoint: given what you've got, in the way of papers, does the workshop
+    look like you have enough quality material to fly? Or should you shut it
+    down? Or perhaps you can wildly reconfigure it to be more of a 
+    town-meeting, less of a presentation-of-research-papers? Or maybe you can
+    pull out of a disaster by commissioning some great invited talks from 
+    serious players? Now is when you decide: green-light/red-light. In the
+    event of a disaster, you will be consulting/discussing all this with
+    the steering & program committees.
+  - Have the PC meeting, virtually or face-to-face.
+  - Discuss possible invited speakers/panel sessions/etc. with PC and 
+    pin this all down.
+  - Notify the authors.
+  - Set the workshop schedule & web publish it.
+  - Another round of publicity, now that you know the content of the workshop.
+  - Final-version papers come in from authors. Check them over; deal with
+    problems.
+  - Get the proceedings assembled -- hardcopy & a web version.
+  - Run the workshop.
+  - Make the online proceedings available on the web.
+  - Meet with the steering committee and review/debrief. How'd it go?
+    What to do next year? Skip a year? Colocate w/a different conference?
+    Shut it down? Build it up? Build it up, how? Pick the person who's in 
+    charge for next year.
+  - Meta-work: write a document like this one for next year's guy. What'd
+    you learn that's not in this document? What ideas did you have that
+    worked out really well? What did you trip over? Institutionalise the 
+    knowledge. Get the attendance & paper-submission stats and record them 
+    someplace useful.
+
+-------------------------------------------------------------------------------
+* Tech report or ACM publication?
+---------------------------------
+There are two standard things you can do to publish the proceedings for
+the workshop. (1) ACM will do it for you, or (2) you can put them out as
+a tech-report from your local institution (e.g., the Georgia Tech College
+of Computing, in my case).
+
+** ACM does it
+==============
+If ACM does it, things are pretty easy. You just ship them the papers
+by a certain deadline, which the parent conference's workshop chair will
+set, and the proceedings are created. They will look nice -- real covers,
+nice binding. They will sit on people's shelves for years without falling 
+apart.
+
+However, ACM will require that all the authors sign over the copyrights to the
+papers. If you want a different copyright (I did), then you will need to
+switch to an alternate route. (See below for the issues involved.)
+
+** You do it as a TR
+====================
+
+If you put the proceedings out as a tech report from your local institution,
+then you have to do whatever work is required at your local institution to
+make that happen. One advantage of this might be your ability to choose a
+different copyright policy. (See below.)
+
+If you do this, you are also responsible for making sure a bunch of copies
+are produced and shipped up to the workshop in time for the actual event.
+You'll need to make sure to produce enough -- enough to cover the attendees
+that pre-register, plus extras to handle late registrants *and* people who
+might be attending co-located workshops or conferences that might want to
+buy a copy, even though they are not registered for the workshop itself.
+
+By way of example, Scheme 2002 had 34 pre-registrants. I had 50 copies printed
+up. The actual head count was over 40; all fifty were snapped up by the end
+of the co-located PLI conference. Fifty copies are heavy and expensive to
+ship. Sitting in Atlanta, I had them printed and bound at a Kinko's in
+Pittsburgh... and then, being paranoid, I arranged for a friendly grad
+student at CMU to go by the Kinko's and check over the documents to make
+sure no pages had been left out, or done upside down, etc. And I did this
+with enough lead time so that had something gone wrong, we could have shifted
+into panic mode and handled it. When the registrants arrive for the workshop,
+the proceedings have to be there.
+
+-------------------------------------------------------------------------------
+* Copyrights & the "archival publication" issue
+-----------------------------------------------
+
+The standard rule in the academic paper game is that you can submit a paper to
+a conference or a journal only if you haven't published it somewhere else.
+Workshops, however, are a grey area. Some workshops are effectively little
+specialist, high-quality conferences; people cite papers from their
+proceedings. Some workshops, on the other hand, have more of a "snapshot of
+current progress" nature -- people present raw, possibly not-ready-for-
+archival-publication research to their colleagues to get early exposure and
+feedback. Thus the papers represent more of a "stake in the ground," than the
+author's final say on the work. The expectation is that the work will
+subsequently be polished, extended and sent off to a larger conference or a
+journal. In this case, you do *not* want the proceedings to "count" as "prior
+publication;" they are, again, in a kind of grey area -- proto-published.
+
+This matters to authors. In the pub-counting game that department heads do
+when considering promotion & tenure, publication in a major conference or
+journal counts for more than publication in a workshop. So authors won't
+submit work to your workshop if this means they will be barred from sending a
+later, more mature, revision out to a conference. If you want this kind of
+work to be sent to your workshop, you need to set things up so that this
+barrier is not in place.
+
+I handled this in two ways:
+- I released the proceedings as a tech report. TR's are not generally
+  considered to "count" as prior publication from the viewpoint of
+  major conferences and journals.
+  - Hence a (presumably revised) paper can be re-submitted to an
+    "archival" conference or journal;
+  - but if a paper never goes any further... it is at least available
+    from Georgia Tech. More importantly, Georgia Tech College of Computing
+    TR's, like tech reports everywhere, are available from the CoC's home
+    page. So people can download them or cite them if the paper is important 
+    and a better alternative never happens.
+
+- By releasing the proceedings as a tech report, I was able to choose my own
+  copyright conditions. Thus I could allow the authors to *retain copyright*
+  to their papers, so they could subsequently re-submit them elsewhere, or
+  net-publish them in other, informal ways. I did, however, require authors to
+  attach the following copyright notice to the version that appeared in the
+  workshop proceedings, a version of the ACM copyright that I broadened to
+  allow general non-commercial reproduction of the work:
+
+    Permission to make digital or hard copies, to republish, to post on
+    servers or to redistribute to lists all or part of this work is granted
+    without fee provided that copies are not made or distributed for profit or
+    commercial advantage and that copies bear this notice and the full
+    citation on the first page. To otherwise copy or redistribute requires
+    prior specific permission. Third Workshop on Scheme and Functional
+    Programming. October 3, 2002, Pittsburgh, Pennsylvania, USA. Copyright
+    2002 <author's-name-here>.
+
+Again, if ACM publishes the proceedings, *they* will own copyright to the 
+papers, with the following (as of 2002/10) copyright:
+    Permission to make digital or hard copies of all or part of this work for
+    personal or classroom use is granted without fee provided that copies are
+    not made or distributed for profit or commercial advantage and that copies
+    bear this notice and the full citation on the first page. To copy
+    otherwise, to republish, to post on servers or to redistribute to lists,
+    requires prior specific permission and/or a fee.
+
+-------------------------------------------------------------------------------
+* Document production
+---------------------
+There's more to do if you produce your own proceedings instead of letting
+the ACM do it for you. I did my own, so I have a bunch of stuff to say on
+this topic.
+
+** Document style
+=================
+I really hate the new ACM style -- the section headings are jarringly large
+(the entire heading is upper-cased). If I were doing it over again, I would
+hack the ACM official LaTeX class file to return to the smaller, quieter,
+sans-serif section heads that ACM conferences used to use.
+
+** Errors
+=========
+People will send you their documents, probably in PostScript or PDF format.
+Right off the bat, you should preview them and make sure they're in the right
+page layout -- if you plan to issue proceedings on 8.5"x11" American "letter"
+paper, you can probably count on a couple of Europeans to send you papers
+typeset for A4 paper. Or vice-versa -- if the the proceedings are to be
+printed on A4 paper, the Americans will all accidentally give you documents
+typeset for 8.5"x11". Even if people are thinking about it, and trying to be
+careful, they will still mess it up. The reason is that the classic LaTeX
+tool chain has multiple points where things can go wrong -- where the author's
+local system defaults can take over and do the wrong thing. Even though,
+for example, the ACM LaTeX class file
+    acm_proc_article-sp.cls
+fixes the page size to 8.5"x11", the dvips or dvipdfm programs can take the 
+dvi file and produce PS or PDF files that are A4, if that's what the local
+defaults are. Authors can override this on a Unix system with
+    dvips -t letter ...
+    dvips -t a4 ...
+    dvipdfm -p letter ...
+    dvipdfm -p a4 ...
+as needed. (I recommend not using dvipdf -- the pdf files it produces must
+cause poor font hinting or something, because they look awful when previewed. 
+Dvipdfm works much better.) Most people don't know about these switches, so
+the ones on the wrong side of the Atlantic get the local default and things
+come out wrong.
+
+On a Unix system, you can check the papers by previewing them with acroread
+or gv. Gv will say at the top of the window, and acroread will say at the
+bottom, what size it thinks the pages are. Check immediately, and iterate
+with the author if it's wrong.
+
+I iterated with one European author for two weeks and possibly fifteen
+submissions before he sent me a properly typeset 8.5"x11" paper. He just kept
+discovering new places in his tool chain where things had gone wrong... and he
+didn't have an American laser printer on hand for a real end-to-end test.
+
+If you warn authors in your "final instructions" mailout to attend to these
+things carefully, and tell them about the right options to the tools and how
+to check with acroread or gv, you will probably not have to deal with quite so
+much lossage as I did. You might also warn authors that when they change
+page-sizes, their line breaks will change, and they should be careful to
+visually check their papers to make sure everything is copacetic. This is
+all obvious, of course! Doesn't matter. People will still get it wrong.
+
+** Page numbering & document merging
+====================================
+Say you have nine papers. You want to assign the pages of each document
+page numbers such that they will be "globally" numbered -- the first
+paper will get, say, page-numbers 1 through 9, the second paper will be
+assigned page numbers 10 through 22, and so forth. But your authors are
+sending you PostScript or PDF files (without page numbers). How do you
+"stick" page numbers onto pages in a PS file?
+
+I wrote Scheme code to scan through a PostScript document and, at each
+page boundary, deposit a little chunk of PostScript code to print out
+a page number. This allowed me to number the PS files myself. A related
+trick allowed me to optionally add a little chunk of PostScript to output
+a blank, numbered page if a particular document ended on an odd page number,
+thus ensuring that each paper in the proceedings began on a 
+right-side/odd-numbered page when printed out two-sided.
+
+Now you have a collection of distinct PostScript files, each one a properly
+page-numbered paper. You also presumably have a separate PostScript file for
+the front matter: title page, preface, table of contents. You would like to
+take all of these files and somehow glue them together to make one big
+PostScript file -- this makes it easier to have your document turned into
+hardcopy by a production shop like Kinko's, and it gives you the ability to
+post a single file on the net as the proceedings. How do you do this?
+
+There's a Unix tool (a perl script) called psmerge that purports to do exactly
+this. But it does not appear to work. It doesn't even seem to be finished code.
+I wrote Scheme code to directly disassemble & reassemble the PS files myself, 
+but lacked enough information about PostScript document formats to make this
+approach work. So here is what I did:
+  - I concatenated all the individual PostScript files together, and
+    fed the result to distill -- the Adobe ps->pdf distiller tool. This
+    actually works, producing a pdf file for the whole proceedings.
+      cat *.ps | distill -compatlevel 3.0 -resolution 2400 \
+                         -embedallfonts on -colordownsample off
+    The resolution and colorsampling switches keep included figures
+    at a high spatial & color resolution. Note that distiller is a commercial
+    product, so you have to find a host that has a properly licensed (i.e., 
+    paid for) copy.
+
+  - Then I used Adobe acrobat to move back from pdf to ps.
+      acroread -toPostScript -fast -level2 -printerhalftones \
+               -size letter foo.pdf
+
+There are probably other ways to do this. One sign that this approach is not
+all it could be is that the final PostScript file (produced, you will note, by
+a pair of Adobe products), will cause Adobe distiller to lock up and go into
+an infinite loop. Hmm.
+
+Access to a library allowing parsing and manipulation of PDF documents might
+be a better way to go. Or you could handle the page-numbering task by asking
+your authors to iterate with you a final time, once you know the proper
+starting page number for each paper.
+
+** Front matter
+===============
+The "front matter" of a document is the title page, preface, table of
+contents, etc. that precede the actual body of the document. Feel free
+to base yours on the LaTeX I used. (See references at the end of this
+document.)
+
+-------------------------------------------------------------------------------
+* Email heartbeats
+------------------
+It's good to maintain an email "heartbeat" during the workshop planning
+process -- when you are busy processing things, send an update to the steering
+committee, the program committee or the accepted-authors list. If you maintain
+mailing lists for these three sets of people, it is trivial to send a
+three-line msg out to the appropriate list when needed. People will rest
+easier knowing issues have been registered and are being handled, even if the
+solution is not totally nailed down.
+
+I did *not* do this when I ran Scheme 2002; I stayed silent until I had a
+resolution on an issue, and this induced unnecessary worry in the in-between
+spaces.
+
+-------------------------------------------------------------------------------
+* Delegate
+----------
+You should arrange to have someone in charge of publicity and someone in
+charge of the necessary network services -- i.e. running the web page
+& mailing lists. The web-page job, in particular, is critical. 
+- You will need a home page for your workshop so that people can check on
+  it during the one-year run-up to the event.
+- The home page will also be the standard location where people look up
+  the call-for-papers, the relevant deadlines, and the selected list of
+  papers.
+- You'll need a page allowing authors to submit papers off the net.
+- You'll need infrastructure to support the reviewing process -- your
+  program committee will need to download the papers, upload reviews,
+  look at the other reviews, etc., all under some kind of authentication
+  system to protect access to the reviews. There are software systems
+  that do exactly this. For Scheme 2002, the workshop web maintainer just
+  wrote Scheme web-server code on the fly to meet the committee's needs.
+- You'll need to mail out notifications of acceptance and rejection once
+  the reviewing process is finished.
+
+The point of having someone manage all this is that you, personally, are going
+to be very tied down making decisions, managing the group-decision review
+process, and so forth. If you can *implement* a decision simply by sending an
+email msg to someone who then does the appropriate the web-server hackery, you
+can get on to the next decision with something like reasonable speed.
+
+-------------------------------------------------------------------------------
+* Running the paper-selection process
+-------------------------------------
+Before you select your program committee, you need to nail down the dates
+during which the members are expected to read the papers, and when the actual
+program-selection meeting will happen (virtually or face-to-face). These dates
+must be part of the invitation to join the committee -- members must be
+available during those windows of time. If someone is, for example, getting 
+married during that time, you have a problem.
+
+A face-to-face meeting, where everyone comes together for 1-2 days of
+full-time, no-interruption discussion is the *best* way to select papers. This
+is probably unrealistic for a small workshop, unless you can "piggyback" on
+some other magnet event that everyone else will be attending anyway, such as a
+major conference. More likely, however, you'll have to do it via email.
+
+For a small workshop, I had everyone send me reviews, formatted as
+seven-element Scheme lists for easy processing. (Or have folks enter them
+using a web service you set up.) During the review-submission phase, it's good
+if you have some web-viewable scoreboard that indicates which reviews are
+submitted and which are outstanding, without releasing the actual text or
+rating of the reviews. This serves as a intra-committee shaming mechanism to
+encourage lazy reviewers (such as myself) to get their asses in gear as the
+meeting deadline approaches. The initial reviews, as encoded in the
+seven-element list, have a rating field which provides very coarse resolution:
+"definitely no," "definitely yes," or "discuss." This simple rating (which I
+stole from Matthias Felleisen) would not suffice for a large conference, but
+is fine a small workshop. When the virtual/email meeting starts, you first
+quickly take care of the yes/no papers on which there is wide agreement, then
+you have the rest of your time for the "discuss" papers, or papers on which
+there is wide variance.
+
+There are a selection of web-based systems now becoming available for
+automatic the review process. You should almost certainly investigate
+and use one of these.
+
+Program committee members frequently ask outside experts to review papers
+about which they don't feel that knowledgeable. I have stolen a ruling from
+Simon Peyton-Jones here: a pc member can get an outside review, but *must*, in
+any event, read the paper and write a review himself. Without this
+requirement, the committee member really can't join the discussion -- even if
+the paper completely baffles him, his effort to read it and write a review is
+what will allow him to actually *apply* his outside expert's review. You
+should make this contract clear as a condition of membership when you recruit
+your program committee.
+
+In my view, my job as committee chairman is to mostly listen. If you are busy
+telling the program committee whether or not to accept a paper, why did you
+have a program committee in the first place? It is helpful, during the
+discussion, for the chairman to send out summaries -- global context to guide
+local decision making. I.e., a little table showing the papers selected,
+rejected, and currently-undetermined, along with a tally of how many free
+slots are left. This allows relative judgements to be made, especially after
+you've processed most of the papers and get down to the last few papers (where
+you'll spend most of your time and heat). As things take shape, you can
+restate decision-requests in this framework, i.e. "We can only accept two more
+papers. Accepting paper X means rejecting one of Y & Z. Does it meet that
+level?" It is also helpful, after a round of discussion, to summarise and
+"play back" what you have heard -- i.e., "What I am hearing is that people are
+generally uneasy about the lack of X Y & Z in this paper but no one has quite
+exceeded threshold to say 'kill it.' No one seems willing to champion the
+paper. Unless someone stands up and gets passionate about it, I think we
+should kill it and move on." This forces people to gauge their commitment to a
+given paper, and you can move forward.
+
+-------------------------------------------------------------------------------
+* The mini-tmrf
+---------------
+ACM gets a handle on your workshop by some document called a "mini TMRF"
+(ACM-speak for "technical-meeting request form"). It basically states
+the parent conference/location/date, expected number of attendees, and some
+rough budget information (fixed costs, like meeting-room cost & printing up
+the proceedings, and per-capita costs, like lunch). It takes about five
+minutes to fill out, if you have access to last year's mini-TMRF -- you just
+start with last year's numbers and adjust them up or down as you think proper.
+
+ACM mailed me the mini-TMRF-request as a Microsoft Word attachment, which I
+was then supposed to fill in and mail back. Give me a break; it's 49 lines of
+simple text. Here is what it looks like. When you get yours, turn it around and
+ship it back immediately. This will serve to stun and amaze the beset-upon
+administrators struggling to make your parent conference happen.
+------
+    Standard TMRF for PLI 2002
+    Possible Meeting Dates: from October 3-8, 2002
+    Sponsored by: ACM - SIGPLAN
+    Meeting Location:  Pittsburgh (USA)
+    Previous Dates, Location and Sponsorship (if any): PLI 2001
+    Parent Conference: ICFP / PPDP
+    Chair of Parent Conference: Mitchell Wand (Northeastern University), 
+	ICFP 2002 Conference Chair
+
+    (A)Number of attendees (average of expected number of attendees for 
+       each workshop): 30
+
+    ***Variable Cost***
+    (B)Food/person: $35
+    (C)Basic Service Fee/person ($10/day): $10
+    (D)Variable Cost/person (B+C): $45
+    (E)Total variable cost (D + A) : $1350
+
+    ***Fixed Cost ***
+    (F)Cost of notes (contribution to expenses for printing of
+       proceedings/notes or delivering of proceedings/notes to Florence): $250
+    (G)Cost of audio/video: $100
+    (H)Cost of meeting room (including security service and technical assistance):
+      $200
+    (I)Total fixed cost (F + G + H): $550
+
+    (J)Total expense (E + I) : $1900
+
+    (K)Registration Fee for ACM and/or SIGPLAN members and students (J/A): $65
+    (L)Registration Fee for non-members (J/A + $10): $75
+    (M)Total Income (A + K): $2050
+
+    (N)Profit (M-J) : $150  
+
+    Workshop Chair: O. Shivers (Georgia Institute of Technology)
+
+    CALL FOR  WORKSHOP PROPOSALS
+    Principles, Logics and Implementations
+    of high-level programming languages (PLI 2002)
+    Firenze, Italy
+    September 3 - 7, 2001
+    http://music.dsi.unifi.it/pli01
+
+    PLI 2002, a federation of colloquia which includes ICFP 2002 (ACM-SIGPLAN
+    International Conference on Functional Programming) and PPDP 2002 (ACM-SIGPLAN
+    International Conference on Principles and Practice of Declarative
+    Programming), will be held in Pittsburgh, Pennsylvania, October 4-8, 2002.
+
+    Affiliated workshops will be scheduled from October 3-8.
+
+
+-------------------------------------------------------------------------------
+* Getting the word out
+----------------------
+
+You will, of course, write up a call for papers, and it will have all the
+important dates and list all the interesting PC members whose association with
+your workshop will cause the research community to sit up and take notice. And
+you will post your CFP on your workshop's home page and ship it to all the
+right netnews groups and mailing lists. But.
+
+CFPs are long documents. People blast through their email. They may skip over
+the CFP, expect to come back to it later... and then it just falls off the end
+of their queue. You just lost a potential paper.
+
+So when you post to a newsgroup or spam a set of mailing lists, *write a
+personal, friendly, short intro that gets the important bits out:*
+  - the workshop is happening, 
+  - it'll be in October, colocated with ICFP, 
+  - and the SUBMISSIONS DEADLINE IS IN SIX WEEKS. 
+Those are the key items you want people to know. Here is what I wrote when I 
+posted to netnews:
+
+    From: Olin Shivers (shivers@cc.gatech.edu)
+    Subject: The SIGPLAN Scheme Workshop
+
+    The 2002 Scheme Workshop will be in Pittsburgh in October, the day
+    before ICFP. Submission deadline for papers is May 17. We will be
+    planning not only presentation of papers but also some interesting
+    group discussions. Going by the previous workshops, it should be a
+    useful and fun day for just about anyone with an interest in Scheme
+    or functional programming languages. I hope to see you there, and I
+    especially encourage people to submit papers to the program committee.
+    Please take a moment to read the "call for papers" I've appended below, 
+    and see if you have a topic or result you would like to submit to the
+    program committee.
+
+    See you in Pittsburgh.
+	-Olin Shivers
+	 workshop chairman
+
+    =========================================================================
+    <call-for-papers-goes-here>
+
+*That*, people will read (I fondly hope). If I'd extracted the three
+key points as a bullet list, it probably would have been even better.
+
+Here is a list of mailing lists I used for the Scheme 2002 CFP (I have
+mangled/armored the addresses in an obvious way to prevent the addresses from
+being captured by spambots should this document appear on the web.). I
+assembled it from other lists given to me by shady characters who accosted me
+in dark alleys.
+
+    caml-list at pauillac point inria point fr,
+    ccl at ps point uni-sb point de,
+    ccp at sics point se,
+    church-announce at types point bu point ed-you,
+    clean-list at cs point kun point nl,
+    clp at comp point nus point ed-you point sg,
+    clp at comp point nus point ed-you point sg,
+    concurrency at cwi point nl,
+    eacsl at dimi point uniud point it,
+    erlang-questions at erlang point org,
+    formal-methods at cs point uidaho point ed-you,
+    glp at first point gmd point de,
+    grin at di point unipi point it,
+    gulp at di point unipi point it,
+    haskell at haskell point org,
+    lopstr at cs point man point ac point uk,
+    lprolog at cs point umn point ed-you,
+    mercury-users at cs point mu point oz point au,
+    pl-seminar at ccs point neu point ed-you,
+    plt-scheme at fast point cs point utah point ed-you,
+    prog-lang at diku point dk,
+    prog-lang at diku point dk,
+    prolog-vendors at sics point se,
+    rewriting at ens-lyon point fr,
+    seworld at cs point colorado point ed-you,
+    sicstus-users at sics point se,
+    theorem-provers at ai point mit point ed-you,
+    theory at brics point dk,
+    theorynt at listserv point nodak point ed-you,
+    types at cis point upenn point ed-you
+
+I posted the CFP for Scheme 2002 to the comp.lang.scheme netnews group, and a
+separate post to these somewhat-related newsgroups
+
+  comp.lang.dylan, comp.lang.functional, comp.lang.lisp, comp.lang.lisp.franz,
+  comp.lang.lisp.mcl, comp.lang.lisp.x, comp.lang.apl, comp.lang.clos
+
+with a prefatory piece of text explaining the cross-post:
+
+    The Scheme Workshop will be held this year in Pittsburgh, in October, the
+    day before ICFP. I am the workshop chairman. I am taking the liberty of
+    cross-posting the call for papers to some netnews programming-language
+    groups with related topics. We would certainly welcome papers on relevant
+    topics from your communities as well as attendance and participation in
+    the workshop's discussions.
+	-Olin Shivers
+
+
+-------------------------------------------------------------------------------
+* Money
+-------
+
+You might want to try to come up with a list of researchers or other
+interested parties who work at companies with either a direct interest in your
+workshop area, or general interest and deep pockets. See if they can get you
+some sponsorship -- a 5-10k$ grant, perhaps. It is not a bad idea to have a
+specific budget in mind, or a specific use & target sum when you approach a
+company, as opposed to a diffuse lay-some-money-on-us request. You can, for
+example, use the money to grant travel support to interested but impoverished
+grad students. If you do this, of course, good manners and a sense of
+obligation should impel you to place corporate-sponsorship logos on your web
+page, in the preface of the conference proceedings, and inside your CFP. And
+you should definitely mention the availability of travel support for needy
+cases on your web page, in your CFP and any subsequent call-for-participation
+you issue.
+
+But you don't want to let a company "buy" your workshop. (It's not likely
+they'd want to, but erroneously giving the impression they have done so is
+just as damaging.) So if you, for example, ask Todd Proebsting or Charles
+Simonyi from Microsoft to come and give an exciting, *invited* talk... you
+probably don't want to ask Microsoft to sponsor your workshop. (If Charles
+submits a paper to the *reviewed* paper track, there's no conflict.)
+
+
+-------------------------------------------------------------------------------
+* Talk preparation
+------------------
+Small workshops are sometimes the first presentation young grad students
+make; they are also sometimes a venue for passionately interested people
+who are not mainstream academics to present work. If so, you may get some
+interesting submissions from people who haven't been carefully trained to make
+public presentations of research papers, and so their actual talk may bomb.
+I specifically addressed this in my "final instructions" mail to the authors
+presenting work at Scheme 2002; feel free to steal my text if you like.
+
+Some conferences follow the practice of assigning "shepherds" to accepted
+papers to help with requested (or perhaps required) revisions. I have assigned
+a shepherd once to help out an inexperienced author who had presented a great
+result in a very awkward manner. The author was very grateful for the
+assistance, and, in my opinion, it transformed his talk and slides from a
+probable disaster into a definite success. This is an item you can pull out
+of your toolbox during the review session, but it's a tricky thing to do,
+and probably only warranted in exotic cases.
+
+-------------------------------------------------------------------------------
+* Personal leverage
+-------------------
+
+If you didn't know a bunch of people in your little research area, you
+wouldn't have been chosen to run your workshop. This applies to your
+workshop's steering committee and program committee, as well. All told, this
+is a group of 10 or 15 people who, in turn, know hundreds of people in your
+workshop's area of interest. When you are a 1-2 months from the submission
+deadline, get to work, and put these people to work, too. Be persistent. Call
+people up and harangue them to submit something interesting to the workshop.
+You know who these people are. You know who is doing cool stuff. You know
+who probably has grad students developing good things that could use an
+early airing within the active community pushing on related issues.
+
+Do you know the PC chairman for a related conference that recently sent out
+notifications of acceptance & rejection? (Answer: yes, because you set up your
+submission deadlines this way on purpose. You contacted these people early to
+find out these dates when they were being formed.) This chairman cannot
+violate authors' privacy and tell you who had papers rejected that might, with
+another round of revision, be suitable for your workshop... but the
+information can flow in the *other direction* with no ethical lapses -- you can
+ask this PC chairman to pass word to the appropriate (in his judgement)
+authors about the opportunity your impending workshop submission deadline
+represents.
+
+Does all this sound like a hassle? It turns out to be an extremely useful
+thing to do. In the case of Scheme 2002, personal recruiting on the part of
+several PC members flushed several high-quality papers out of hiding and into
+the review funnel -- papers that *would not otherwise have been submitted*. I
+know of two other papers we *should* have gotten... but we leaned on the
+authors too late, and, though interested and willing, they did not have time
+to get their paper ready.
+
+Of course, you and the other paper-rustlers must be clear that you can't
+promise anything except that the paper will receive exactly the same careful
+review and consideration that all the other papers will get. These aren't
+invited papers you are soliciting -- they are submitted to the selection
+process. Be careful that you don't appear to be promising anything else.
+
+Note that there are some who disapprove of this technique. If you solicit a
+paper, and then bounce it, authors may have their feelings bruised. It always
+hurts to have a paper bounced, and this twists the knife a bit. Submitting a
+paper to a conference has an opportunity cost, as well: it ties up the the
+paper for several months, during which time the author can't submit it to some
+other venue -- some other possibly more appropriate venue. So pressuring
+someone into premature or inappropriate submission could also cause hurt
+feelings.
+
+I still think this is a good tactic... but be aware of the issues involved.
+
+
+-------------------------------------------------------------------------------
+* Have a guy to talk to
+-----------------------
+The whole steering committee is there to help you. Talk to them; email them.
+But you might want to pick *one* particular guy as a sounding board. Phone
+calls play a role in this that email doesn't. People are always jammed up on
+their email; it takes time and is work to compose a good reply to a msg. But
+phone calls are easy; if you just want to kick a topic around, consider a
+phone call. Note, also, that if sensitive issues need to be discussed, phone
+calls have the liberating benefit of not leaving an audit trail -- there's no
+danger that a frank discussion about, for example, a sensitive human issue
+can be accidentally broadcast because you accidentally hit the "reply" key in
+your mail system and shipped it off to comp.lang.functional.
+
+
+-------------------------------------------------------------------------------
+* Historical data
+-----------------
+
+** 2002, third workshop (Pittsburgh)
+====================================
+16 submitted papers, 9 accepted (plus one invited talk).
+Attendance: 41
+	    student	member	nonmember	total
+    early	11	16	2		29
+    late	 2	 4	6		12
+    total	13	20	8		41
+http://scheme2002.ccs.neu.edu/
+2002/10/3
+Organiser: Olin Shivers
+Program Committee:
+  Alan Bawden (Brandeis) 
+  Olivier Danvy (University of Aarhus) 
+  Richard Kelsey (Ember Corp.) 
+  Brad Lucier (Purdue University) 
+  Paul Steckler (Northeastern University) 
+  Andrew Wright (Aleri) 
+
+** 2001, second workshop (Florence, Italy)
+==========================================
+14 submitted papers, 9 accepted.
+26 registrants for the workshop; ?? actual attendees
+2001/9/2
+http://kaolin.unice.fr/Scheme2001/
+Organiser: Manuel Serrano
+Program Committee:
+  William D Clinger, Northeastern University 
+  Matthew Flatt, University of Utah 
+  Christian Queinnec, Université Pierre et Marie Curie, Paris 
+  Manuel Serrano, Université de Nice (general chair) 
+  Michael Sperber, Universität Tübingen 
+  Pierre Weis, INRIA-Rocquencourt 
+
+** 2000, first workshop (Montreal)
+==================================
+17 papers submitted, 11 accepted (a mix of "short" and "long" papers).
+49 attendees
+2000/9/17
+http://www.cs.rice.edu/~matthias/Scheme2000/
+Organiser: Matthias Felleisen, Rice University
+Program Committee:
+  Kent Dybvig, Indiana University 
+  Marc Feeley, Université de Montréal 
+  Matthias Felleisen, Rice University 
+  Daniel Friedman, Indiana University 
+  Manuel Serrano, Université de Nice (Sophia-Antipolis) 
+  Olin Shivers, Massachusetts Institute of Technology 
+
+** 1999, zeroth workshop (Baltimore)
+====================================
+32 attendees
+http://www.schemers.org/Events/Workshops/Sep1998/minutes
+1999/9/26
+Organiser: Richard Kelsey, NEC Research Institute
+Secretary: Will Clinger
+Actually a "pre-R6RS" meeting, with public discussion of submitted
+proposals for language extensions/specs. No proceedings.
+
+
+-------------------------------------------------------------------------------
+* Related documents
+-------------------
+
+I have placed a bunch of related files at url
+    http://www.cc.gatech.edu/~shivers/scheme02-notes/
+
+- render.scm
+  Scheme (scsh) code used to hack the PostScript papers and 
+  produce the proceedings. Even if you don't use scsh, you
+  can at least treat the code as a readable spec.
+
+- rfw.txt
+  PLI's "Request for Workshop proposals."
+
+- ws-prop.txt
+  The proposal submitted in response to the RFW.
+
+- mini-tmrf.txt
+  The ACM mini-TMRF budget form as filled out for Scheme02.
+
+- notification.scm
+  Scsh script I used to notify authors.
+
+- cfp.txt
+  The call for papers
+
+- acmlogo.eps
+  The ACM logo, with bounding box trimmed (by me) to tightly circumscribe it.
+  You can also pick up an ACM logo in EPS format from acm.org. Look under
+  "conference planning."
+
+- front.tex
+  Front-matter for the proceedings as a GT CoC tech report: title page,
+  preface & table of contents. Contains useful LaTeX hackery, especially
+  magic to handle manually typesetting the pagenumbers in the table of 
+  contents.
+
+- final-prep.txt
+  My final-instructions messages to authors. Also contains advice on preparing
+  talk.
+
+- sched.html
+  HTML for the workshop schedule.
+
+- kinkos.tex
+  Take care of the people who take care of you.
+

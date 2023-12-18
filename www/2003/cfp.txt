@@ -1,0 +1,176 @@
+
+                     2003 Scheme Workshop
+                      Friday, November 7
+                     Boston, Massachusetts
+
+          co-located with the Lightweight Languages Workshop
+
+
+                 -----  CALL FOR PAPERS  -----
+
+
+The purpose of the 2003 Scheme Workshop is to discuss experience with
+and future developments of the Scheme programming language ---
+including the future of Scheme standardization --- as well as general
+aspects of computer science loosely centered on the general theme of
+Scheme.
+
+Papers are invited concerning all aspects of the design, semantics,
+theory, application, implementation, and teaching of Scheme. Some
+example areas include (but are not limited to):
+
+- Theory
+    Formal semantics, correctness of analyses and transformations, 
+    lambda calculus.
+
+- Design critiques
+     Limitations of the language, future directions.
+
+- Linguistic extensions
+     Scheme's simple syntactic framework and minimal static semantics
+     has historically made the language an attractive "lab bench" for
+     the development and experimentation of novel language features
+     and mechanisms.
+
+     Topics in this area include modules systems, exceptions, control
+     mechanisms, distributed programming, concurrency and
+     synchronisation, macro systems, and objects.
+
+- Type systems
+     Static analyses for dynamic type systems, type systems that
+     bridge the gap between static and dynamic types, static systems
+     with "type dynamic" extensions, weak typing.
+
+- Implementation
+     Compilers, optimisation, virtual machines, resource management,
+     interpreters, foreign-function interfaces, partial evaluation,
+     and generally implementations with novel or noteworthy features.
+
+- Program-development environments
+     The Lisp and Scheme family of programming languages have
+     traditionally been the source of innovative program-development
+     environments. Authors working on these issues are encouraged to
+     submit papers describing their technologies.
+
+- Education
+     Scheme has achieved widespread use as a tool for teaching
+     computer science.  Papers on the theory and practice of teaching
+     with Scheme are invited.
+
+- Applications and experience
+     Interesting applications which illuminate aspects of Scheme;
+     experience with Scheme in commercial or real-world contexts; use
+     of Scheme as an extension or scripting language.
+
+- Scheme pearls
+     Elegant, instructive examples of functional programming.
+
+     A " Scheme pearl" submission is a special category, and should be
+     a short paper presenting an algorithm, idea or programming device
+     using Scheme in a way that is particularly elegant.
+
+-------------------------------------------------------------------------------
+ Proceedings
+-------------------------------------------------------------------------------
+
+The proceedings of the conference will be published as a University of
+Utah School of Computing technical report.
+
+-------------------------------------------------------------------------------
+ Important dates
+-------------------------------------------------------------------------------
+
+[The submission deadlines were extended after the original announcement.]
+
+  31 August, 2003    - Submission deadline (end of the day, UTC)
+
+  30 September, 2003 - Notification of acceptance or rejection
+
+  29 October, 2003   - Final paper due
+
+   7 November, 2003  - Workshop
+
+-------------------------------------------------------------------------------
+ Submission guidelines
+-------------------------------------------------------------------------------
+
+Authors should submit a 100-200 word abstract and a full paper by the
+end of Sunday, 31 August Universal Coordinated Time. (The end of the
+day UTC corresponds to 8:00 PM EDT, 6:00 PM MDT, and 5:00 PM PDT.)
+
+Submissions will be carried out electronically via the Web, at
+
+      http://scheme2003.flux.utah.edu/
+
+Papers must be submitted in PDF format, or as PostScript documents
+that are interpretable by Ghostscript, and they must be printable on
+US Letter sized paper. Individuals for which this requirement is a
+hardship should contact the workshop chair at least one week before
+the deadline.
+
+There are two classes of submissions, regular papers and short papers:
+
+- Regular papers
+
+  Submissions should be no more than 12 pages (including bibliography
+  and appendices) in standard ACM conference format: two columns, nine
+  point font on ten point baseline, page 20pc (3.33in) wide and 54pc
+  (9in) tall with a column gutter of 2pc (0.33in). Authors wishing to
+  supply additional material to the reviewers beyond the 12 page limit
+  can do so in clearly marked appendices, on the understanding that
+  reviewers are not required to read the appendices. Submissions that
+  do not meet these guidelines will not be considered. Suitable style
+  files for Latex, Word, and Word Perfect can be found on the
+  submission Web site.
+
+  Submitted papers must have content that has not previously been
+  published in other conferences or refereed venues, and simultaneous
+  submission to other conferences or refereed venues is
+  unacceptable. Each paper should explain its contributions in both
+  general and technical terms, clearly identifying what has been
+  accomplished, saying why it is significant, and comparing it with
+  previous work. Authors should strive to make the technical content
+  of their papers understandable to a broad audience.
+
+- Short papers
+
+  Short papers need not present novel research; it is sufficient that
+  they present material of interest or utility to the Scheme or
+  functional-programming community. "Scheme pearls" submissions
+  should be presented as short papers.
+
+  Short papers should be formatted with the same guidelines as regular
+  papers, but are expected to be typically around six pages in length.
+
+-------------------------------------------------------------------------------
+ Organizers
+-------------------------------------------------------------------------------
+
+Workshop chair:
+
+    Matthew Flatt
+    School of Computing
+    University of Utah
+    Salt Lake City, UT 84112
+    +1 801 587 9091
+    mflatt@cs.utah.edu
+
+Program committee:
+
+    Robert Bruce Findler (University of Chicago)
+    Erick Gallesio (University of Nice)
+    Tim Hickey (Brandeis University)
+    Mario Latendresse (FNMOC)
+    Jeffrey Mark Siskind (Purdue University)
+    Mitchell Wand (Northeastern University)
+
+Steering committee:
+
+    William D. Clinger (Northeastern University)
+    Marc Feeley (University of Montreal)
+    Matthias Felleisen (Northeastern University)
+    Dan Friedman (Indiana University)
+    Christian Queinnec (University Paris 6)
+    Manuel Serrano (INRIA)
+    Olin Shivers (Georgia Institute of Technology)
+    Mitchell Wand (Northeastern University)

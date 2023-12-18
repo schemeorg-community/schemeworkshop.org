@@ -1,0 +1,10 @@
+/* black links */
+a:link    { color: black; }
+a:visited { color: black; }
+a:active  { color: black; }
+a:hover   { color: black; }
+
+/* hide navbars */
+.navbar {
+  display: none;
+}

@@ -1,0 +1,100 @@
+body {
+font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+font-size: 12px;
+line-height: 20px;
+color: #222;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+background-color: #f1dca0;
+}
+div#mainbox div {
+width: 660px;
+padding: 20px;
+margin: 20px 0px 20px 0px;
+background: #f9f4dc;
+color: #000;
+}
+div.rounded {
+width: 660px;
+padding: 20px;
+margin: 20px 0px 20px 0px;
+background: #f9f4dc;
+color: #000;
+font-size: 110%;
+}
+div.inbetween {
+margin: 0px 0px 0px 20px;
+font-size: 110%;
+}
+td.time {
+min-width: 5em;
+}
+#RealBody {
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+width: 700px;
+}
+#Header {
+margin: -11px 0px 50px 0px;
+padding: 0px 0px 0px 0px;
+color: #000000;
+text-align: center;
+}
+#TitleLine {
+text-align: center;
+}
+#Content {
+margin: 0px 0px 0px 0px;
+padding: 10px;
+}
+#SubMenu {
+margin: 10px 0px 0px 0px;
+}
+#Footer {
+margin: 0px 0px 0px 173px;
+text-align: right;
+}
+#SubFooter {
+text-align: center;
+margin: 30px 0px 0px 0px;
+}
+#arrowbox {
+height: 20px;
+}
+#lambdapic {
+align: center;
+text-align: center;
+}
+.textright {
+text-align: right;
+}
+.borderpic {
+border-style: solid;
+border-width: 1px;
+border-color: black;
+}
+.leftpic {
+float: left;
+}
+.rightpic {
+float: right;
+}
+.centerdiv {
+text-align: center;
+}
+.namefont {
+font-family: sans-serif;
+font-size: 300%;
+color: #6E74B7;
+}
+.bodyblock {
+padding: 10px 10px 10px 10px;
+margin: 20px 0px 20px 0px;
+background-color: #ffffff;
+}
+.datetable {
+margin: 0px 0px 0px 50px;
+border-spacing: 80px 0px;
+}

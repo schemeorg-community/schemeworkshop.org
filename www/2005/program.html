@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>ACM SIGPLAN 2005 Scheme Workshop</TITLE><LINK 
+href="workshop.css" type=text/css rel=stylesheet>
+<META http-equiv=Default-Style content=preferred>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR>
+</HEAD>
+<BODY>
+<TABLE class=ugly cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=center>
+    <TD width=115><A href="http://www.acm.org/"><IMG height=95 alt=ACM 
+      src="acmlogo.gif" width=115 border=0></A> </TD>
+    <TD><a href="index.html"><STRONG class=title>ACM&nbsp;SIGPLAN</STRONG><BR><STRONG 
+      class=title>2005&nbsp;Workshop&nbsp;on&nbsp;Scheme&nbsp;and&nbsp;Functional&nbsp;Programming</STRONG></a><BR>
+      <DIV class=subtitle>Tallinn, Estonia<BR>24 September, 2005</DIV></TD>
+    <TD vAlign=center width="50%">
+      <P class=affiliation>Part of <A 
+      href="http://www.brics.dk/~danvy/icfp05/">ICFP 2005</A> 
+
+</P></TD></TR></TBODY></TABLE>
+
+<h2 class="vskip">Program &amp; Papers</h2>
+
+      <dl>
+	<!-- one of (DD DT) -->
+<dt>8:45</dt>
+<dd><b>Welcome</b></dd>
+
+<dt>9:00-9:45</dt>
+<dt><b>Type Classes Without Types</b></dt>
+<dt>Ronald Garcia and Andrew Lumsdaine</dt>
+<dd>
+<p>
+Data-directed programs consist of collections of generic functions,
+functions whose underlying implementation differs depending on
+properties of their arguments. Scheme~s flexibility lends itself to
+developing generic functions, but the language has some shortcomings
+in this regard. In particular, it lacks both facilities for con-
+veniently extending generic functions while preserving the flexibility
+of ad-hoc overloading techniques and constructs for group- ing related
+generic functions into coherent interfaces. This paper describes and
+discusses a mechanism, inspired by Haskell type classes, for
+implementing generic functions in Scheme that directly addresses the
+aforementioned concerns. Certain properties of Scheme, namely dynamic
+typing and an emphasis on block structure, have guided the design
+toward an end that balances structure and flexibility. We describe the
+system, demonstrate its function, and argue that it implements an
+interesting approach to polymorphism and, more specifically,
+overloading.
+	</p>
+</dd>
+	<dd>
+	  <p>
+	    <a href="01-garcia/01-garcia.pdf">PDF</a> for the paper;
+	    <a href="01-garcia/pscheme.ss">code</a>; <a
+	  href="01-garcia/test.ss">test suite</a>
+	    </p>
+	</dd>
+
+<dt>9:45-10:30</dt>
+<dt>Eager Comprehensions in Scheme: The design of SRFI-42</dt>
+<dt>Sebastian Egner</dt>
+
+	<dd>
+	  <p>
+
+This article is about a certain style of programming iterative pro- 
+grams. It is based on a concept we have named "eager comprehension," which is a convenient and efficient alternative to tail recursion, do-loops, and lazy list comprehensions (aka "ZF expressions"). Eager comprehensions are syntactic forms that encapsulate 
+the details of an accumulation process (counting elements, creating 
+a list, etc.). Within these forms, expressions called generators hide 
+the details of enumerating basic sequences (running through a list, 
+through a range of integers, etc.). By combining these elements in 
+a clearly structured and well-defined way, a concise and powerful 
+	    notation for writing loops emerges. 
+	  </p>
+	  <p>
+Of course, this style of programming is not new - it is implicitly 
+present in any form of loop-macro already - and so we discuss 
+several concrete designs that aim for the same goal. Surprisingly, 
+however, none of these designs has had much impact on Scheme, 
+despite the fact that their common floor plan has been around for 
+decades. A particularly clean new design, SRFI 42, on the other 
+hand has already made some friends in the first few years of its 
+existence. Explaining the design and implementation of SRFI 42 
+constitutes the main part of this article. 
+	  </p>
+	</dd>
+	<dd>
+	  <p>
+	    <a href="02-egner/02-egner.pdf">PDF</a> for the paper;
+	    <a href="http://srfi.schemers.org/srfi-42/">SRFI 42</a>
+	    </p>
+	</dd>
+
+
+<dt>10:30-11:30</dt>
+<dt>Abstraction and Performance from Explicit Monadic Reflection</dt>
+<dt>Jonathan Sobel, Erik Hilsdale, R. Kent Dybvig, Daniel P. Friedman</dt>
+
+	<dd>
+	  <p>
+Most of the existing literature about monadic programming 
+focuses on theory but does not address issues of software 
+engineering. Using monadic parsing as a running example, 
+we demonstrate monadic programs written in a typical style, 
+recognize how they violate abstraction boundaries, and recover
+clean abstraction crossings through monadic reflection.
+Once monadic reflection is made explicit, it is possible
+to construct a grammar for monadic programming that is 
+independent of domain-specific operations. This grammar, 
+in turn, enables the redefinition of the monadic operators as 
+macros that eliminate at expansion time the overhead imposed
+by functional representations. The results are very efficient
+monadic programs; for parsing, the output code is 
+competitive with good hand-crafted parsers.
+	  </p>
+	</dd>
+	<dd>
+	  <p>
+	    <a href="03-sobel/03-sobel.pdf">PDF</a> for the paper
+	    </p>
+	</dd>
+
+
+<dt>11:30-12:30</dt>
+<dt>An Operational Semantics for R5RS Scheme</dt>
+<dt>Jacob Matthews and Robert Bruce Findler</dt>
+
+	<dd>
+	  <p>
+This paper presents an operational semantics for the core of 
+Scheme. Our specification improves over the existing R5RS denotational
+specification in four ways. First, it is more complete, 
+since it contains <code>eval</code>, <code>quote</code>, and
+<code>dynamic-wind</code>. Second, it models 
+multiple values in a way that does not require changes to unrelated 
+parts of the language. Third, it provides a more faithful model of 
+Scheme~s undefined order of evaluation. Finally, it is executable, 
+because it is encoded as a program in PLT Redex, a domain-specific 
+language for writing operational semantics. The executable
+specification allows others to experiment with our specification and 
+allows us to build a specification test suite, which improves our 
+confidence that our system is a faithful model of Scheme. 
+</p>
+<p>
+In addition to contributing a specification of Scheme, this paper 
+presents several novel modeling techniques for Felleisen Hieb-style 
+rewriting semantics that we discovered while developing our R5RS 
+Scheme semantics. All are applicable to a wider range of problems 
+than the specific uses we have for them, and the fact that they 
+combine seamlessly in our full R5RS model shows that they scale 
+to real languages. 
+	  </p>
+	</dd>
+
+	<dd>
+	  <p>
+	    <a href="04-matthews/04-matthews.pdf">PDF</a> for the
+	    paper;
+	    <a href="04-matthews/r5rs.scm">source code</a> for the semantics
+	    </p>
+	</dd>
+
+<dt>14:30-15:00</dt>
+<dt>Commander S - The shell as a browser</dt>
+<dt>Martin Gasbichler and Eric Knauel</dt>
+
+	<dd>
+	  <p>
+	   Commander S is a new approach to interactive Unix shells based 
+on interpretation of command output and cursor-oriented terminal
+programs.  The user can easily refer to the output of previous 
+commands when composing new command lines or use interactive 
+viewers to further explore the command results. Commander S is 
+extensible by plug-ins for parsing command output and for viewing
+command results interactively. The included job control avoids 
+garbling of the terminal by informing the user in a separate widget 
+and running background processes in separate terminals. Commander S
+is also an interactive front-end to scsh, the Scheme Shell, and 
+it closely integrates Scheme evaluation with command execution. 
+The paper also shows how Commander S employs techniques from 
+object-oriented programming, concurrent programming, and functional
+programming techniques. 
+	  </p>
+	</dd>
+
+	<dd>
+	  <p>
+	    <a href="05-knauel/05-knauel.pdf">PDF</a> for the paper;
+	    <a href="http://www.scsh.net/resources/commander-s.html">Command S web page</a>
+	    </p>
+	</dd>
+
+<dt>15:00-15:30</dt>
+<dt>Ubiquitous Mails</dt>
+<dt>Erick Gallesio and Manuel Serrano</dt>
+
+	<dd>
+	  <p>
+Bimap is a tool for synchronizing IMAP servers. It enables two 
+or more IMAP mirrored servers to be modified independently 
+and later on, synchronized. Bimap is versatile so, in addition to 
+synchronizing emails, it can be used for filtering and classifying 
+emails. For the sake of the example, the paper shows automatic 
+emails classification and white-listing programmed with Bimap. 
+</p>
+<p>
+Bimap is implemented in Scheme. The most important parts of 
+its implementation are presented in this paper with the intended 
+goal to demonstrate that Scheme is suited for programming tasks 
+that are usually devoted to scripting languages such as Perl or 
+Python. With additional libraries, Scheme enables compact and 
+efficient implementation of this distributed networked application 
+because the main computations that require efficiency are executed 
+in compiled code and only the user configurations are executed in 
+interpreted code. 
+	  </p>
+	</dd>
+	<dd>
+	  <p>
+	    <a href="06-serrano/06-serrano.pdf">PDF</a> for the paper
+	    </p>
+
+<dt>15:30-16:00</dt>
+<dt>Implementing a Bibliography Processor in Scheme</dt>
+<dt>Jean-Michel Hufflen</dt>
+
+	<dd>
+	  <p>
+We report an experience of implementing the MlBibTeX bibliography
+processor, a re-implementation of BibTeX with particular focus on
+multilingual features. First we describe the behaviour of this
+software and explain why we chose Scheme to implement the first public
+version. Then we give the broad outlines of our implementation and
+show how we took as much advantage as possible of the main features of
+Scheme. We also explain what we really missed and suggest some ways to
+improve these points.
+	  </p>
+	</dd>
+	<dd>
+	  <p>
+	    <a href="07-hufflen/07-hufflen.pdf">PDF</a> for the paper; <a
+	    href="http://lifc.univ-fcomte.fr/~hufflen/texts/mlbibtex/mlbibtex">MlBibTeX web page</a>
+	</dd>
+	    </p>
+	</dd>
+
+<dt>16:30-17:00</dt>
+<dt>The Marriage of MrMathematica and MzScheme</dt>
+<dt>Chongkai Zhu</dt>
+
+	<dd>
+	  <p>
+In this paper, I argue that the programming languages provided 
+in current mainstream CASes are not suitable for general purpose
+programming. To address this problem, I developed MrMathematica.
+MrMathematica is a connection between Mathematica and 
+PLT-Scheme, which provides the ability to call Mathematica from 
+MzScheme. The two languages share some common ground, but 
+are mostly complementary to each other. MrMathematica enhances 
+Mathematica, and it helps to introduce Scheme to more people 
+(CAS users). 
+	  </p>
+	</dd>
+
+	<dd>
+	  <p>
+	    <a href="08-chongkai/08-chongkai.pdf">PDF</a> for the
+	    paper;
+	    <a href="http://www.neilvandyke.org/mrmathematica/">MrMathematica web page</a>
+	    </p>
+	</dd>
+
+<dt>17:00-17:30</dt>
+<dt>ACT Parameterization Framework</dt>
+<dt>Alan Pavicic and Niksa Bosnic</dt>
+
+	<dd>
+	  <p>
+ACT is a generic parameterization framework used in the development
+of applications for modeling and parameterization of internal 
+combustion engines. It is developed in Guile. Its two main parts 
+are Ilm core of object model built on top of Goops, and Bee editor 
+environment providing UI. The core object model supports generic 
+persistence of any object to database, type guardians for different 
+slots, nameservices and object repositories. It also supports addins, 
+additional modules which can change the behavior of the entire 
+system as well as any of its parts (e.g. undo/redo functionality,
+dependencies between objects, event notification, ...). The editor
+environment for editing Ilm objects includes a library of basic editors, 
+simple composite editors and generic editors. A grading system can 
+be used to dynamically decide which registered editor class is the 
+most appropriate for editing a particular object. Every Bee editor is 
+an Ilm object itself. High level XML descriptions of data models 
+and editors can be compiled to Scheme code defining Ilm classes 
+and Bee editors. 
+	  </p>
+	</dd>
+
+	<dd>
+	  <p>
+	    <a href="09-pavicic/09-pavicic.pdf">PDF</a> for the paper
+	    </p>
+	</dd>
+
+<dt>17:30-18:00</dt>
+<dt>Javascript to Scheme Compilation</dt>
+<dt>Florian Loitsch</dt>
+
+	<dd>
+	  <p>
+This paper presents Jsigloo, a Bigloo frontend compiling Javascript 
+to Scheme. Javascript and Scheme share many features: both are 
+dynamically typed, they feature closures and allow for functions 
+as first class citizens. Despite their similarities it is not always 
+easy to map Javascript constructs to efficient Scheme code, and in 
+this paper we discuss the non-obvious transformations that needed 
+special attention. 
+</p>
+<p>
+Even though optimizations were supposed to be done by Bigloo 
+the chosen Javascript-Scheme mapping made several analyses ineffective
+and some optimizations are hence implemented in Jsigloo. 
+We illustrate the opportunities Bigloo missed and show how the 
+additional optimizations improve the situation.
+	  </p>
+	</dd>
+
+	<dd>
+	  <p>
+	    <a href="10-loitsch/10-loitsch.pdf">PDF</a> for the paper
+	    </p>
+	</dd>
+
+      </dl>
+
+
+</body>
+</html>

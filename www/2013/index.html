@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>Scheme 2013 :: Workshop on Scheme and Functional Programming</title>
+
+
+<style>
+/* CSS reset */
+
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+
+<style>
+
+div#contents ul{
+  list-style: circle ;
+  margin-left: 20px ;
+}
+
+div#contents ol{
+  list-style: decimal ;
+  margin-left: 20px ;
+}
+
+div#contents ol li {
+  margin-top: 15px ;
+}
+
+
+
+div#contents li {
+  margin-left: 20px; 
+}
+
+a {
+ text-decoration: none ;
+}
+
+p {
+ margin-bottom: 15px ;
+}
+
+body {
+ padding-top: 10px ;
+ font-family: Palatino, Optima, Calibri, Tahoma, Helvetica, Arial, Georgia ;
+ background-color: #cccccc ;
+ background-repeat: no-repeat ;
+ color: #282828 ;
+}
+
+div.module {
+ float: left ;
+ border: 1px solid #777777;
+ -moz-border-radius: 6px ;
+ -webkit-border-radius: 6px ;
+ border-radius: 6px ;
+ background-color: #eeeeee ;
+ margin: 10px ;
+ padding: 20px ;
+}
+
+div.main-unit {
+ width: 400px;
+}
+
+div.unit {
+ width: 620px;
+ padding: 40px; 
+}
+
+
+div#container{
+ margin-left: auto ;
+ margin-right: auto ;
+ width: 780px;
+ padding: 0px;
+}
+
+div#contents {
+ margin-left: auto ;
+ margin-right: auto ;
+ width: 780px;
+ padding: 0px;
+}
+
+div#main {
+ width: 440px ;
+ float: left ;
+ padding: 0px;
+ margin: 0px ;
+}
+
+div#header {
+ /* color: #ffffff ; */
+ /* height: 50px; */
+ /* background-image: url(sanjose-night2.png) ; */
+ padding-top: 10px ;
+}
+
+
+div#navbar {
+ float: left ;
+ width: 200px ;
+}
+
+h2 {
+ text-align: center ;
+ font-size: 115% ;
+ margin-bottom: 20px ;
+}
+
+h3 {
+  margin-bottom: 15px ;
+}
+
+div#main td {
+ padding-right: 10px ;
+}
+
+div#header-area {
+ float: left;
+ width: 380px;
+}
+
+div#header-title {
+ float: left;
+ font-size: 44px;
+}
+
+div#header-subtitle {
+ float: left;
+ margin-left: 10px;
+ font-size: 18px;
+ margin-top: 4px;
+}
+
+div#fcrc-notice {
+ float: left ;
+ width: 370px ;
+ font-weight: bold ;
+ margin-left: 3px ;
+ font-size: 14px ;
+}
+
+div#fcrc-notice a {
+ color: blue ;
+}
+
+td {
+ padding-bottom: 6px ;
+}
+
+div#navbar h2 {
+ margin-bottom: 10px ;
+}
+
+h2.important {
+ color: #ff3333 ;
+}
+
+div.schedule {
+ padding-left: 20px ;
+}
+
+table.schedule td {
+  border: 1px solid black ;
+  padding: 10px ;
+}
+
+IMG.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+
+<!--[if gte IE 6]>
+<style>
+div#header {
+ color: black ;
+ background-image: url(not-found.jpg) ;
+ height: 120px ;
+}
+
+div#header-area {
+ margin-top: 5px ;
+ float: none ;
+ height: 110px ;
+ display: block ;
+}
+
+div#header-title {
+ float: none ;
+ font-size: 44px;
+ height: 50px ;
+ display: block ;
+}
+
+div#header-subtitle {
+ float: none ;
+ height: 50px ;
+ display: block ;
+ font-size: 18px;
+ margin-top: 4px;
+ margin-left: 0px ;
+}
+
+div#fcrc-notice {
+ float: none;
+ display: block ;
+ width: 370px ;
+ font-size: 100% ; 
+ font-weight: bold ;
+ color: black ;
+ margin-left: 0px;
+}
+
+
+div#fcrc-notice a {
+ color: blue ;
+}
+
+</style>
+<![endif]-->
+
+
+
+</head>
+
+<body>
+
+<div id="container">
+
+
+ <div id="navbar" class="module">
+   
+   <h2 class="important">Important dates</h2>
+
+   <table>
+
+    <tbody>
+     <tr>
+      <td>Full papers:</td>
+      <td>&nbsp;</td>
+      <td><strike>1&nbsp;Aug&nbsp;2013</strike></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><strike>13&nbsp;Sep&nbsp;2013</strike></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><b>20&nbsp;Sep&nbsp;2013</b></td>
+    </tr>
+
+    
+     <tr>
+      <td>Notification:</td>
+      <td>&nbsp;</td>
+      <td><strike>9&nbsp;Oct&nbsp;2013</strike></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><strike>13&nbsp;Oct&nbsp;2013</strike></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><b>20&nbsp;Oct&nbsp;2013</b></td>
+    </tr>    
+
+    <tr>
+      <td>Camera-ready:</td>
+      <td>&nbsp;</td>
+      <td>30&nbsp;Oct&nbsp;2013</td>
+    </tr>
+    
+    <tr>
+      <td>Workshop:</td>
+      <td>&nbsp;</td>
+      <td>13&nbsp;Nov&nbsp;2013</td>
+    </tr>    
+
+
+
+   </tbody></table>
+
+   
+  <br>
+
+   <h2 class="important">Important links</h2>
+   <ul>
+    <li>
+      <strike>Registration</strike> (closed)
+    </li>
+    <br />
+    <li>
+      <strike>Paper submission</strike> (closed)
+    </li>
+   </ul>
+
+
+   <br>
+
+   <h2>Connect</h2>
+
+   <ul>
+     <li>Twitter: <a href="http://www.twitter.com/schemeworkshop/">@schemeworkshop</a></li>
+   </ul>
+   
+ </div>
+
+
+ <div id="main">
+
+ <div id="header" class="module main-unit">
+
+   <div id="header-area" style="">
+
+     <div id="header-title"><b>Scheme '13</b></div>
+
+     <div id="header-subtitle">
+         <b>13 November 2013</b>
+         <br>
+	 <b>Mason Room</b>
+	 <br>
+	 <b>Embassy Suites Alexandria - Old Town</b>
+	 <br>
+         <b>Alexandria, Virginia (Washington, D.C.)</b>
+     </div>
+
+
+     <div id="fcrc-notice">
+       <br />In conjunction with <a href="http://clojure-conj.org/">Clojure/conj</a>
+     </div>
+     
+   </div>
+
+
+ </div> <!-- /header -->
+
+ <div id="definition" class="module main-unit">
+  <b>Scheme 2013</b> is the annual <a href="http://www.schemeworkshop.org/">Workshop on Scheme and Functional Programming</a>.
+ </div>
+
+
+ <div id="news" class="module main-unit">
+
+   <h2>Recent News</h2>
+   
+   <ul>
+     <li><b>13 Jan 2014</b>: Final versions of all papers now posted.</li>    
+<!--
+     <li><b>22 Oct 2013</b>: The list of accepted papers has been posted below.</li>
+-->
+<!--     
+     <li><b>3 Oct 2013</b>: We are pleased and excited to announce that <a href="http://alexey.radul.name/">Alexey Radul</a> will be presenting the keynote. Alexey is best known in the Scheme community for his work on <a href="http://dspace.mit.edu/handle/1721.1/44215"><em>The Art of the Propagator</em></a>.</li> -->
+<!--     <li><b>2 Oct 2013</b>: The author notification deadline has been pushed back to 20 Oct.  We will notify authors before this date, if possible.</li>
+     <li><b>17 Sept 2013</b>: The submission site is open once again.</li>
+     <li><b>12 Sept 2013</b>: Due to technical problems with the submission site, and requests from several authors for an extension, the <b>submission deadline has been extended one week to Friday, September 20 (anytime in the world)</b>. We do not anticipate any further deadline extensions.</li>
+     <li><b>3 Sept 2013</b>: Revised paper length in Submission Requirements (below). The suggested length for most papers is about 6 pages, excluding references, although papers can be longer if necessary.</li>
+     <li><strike>Submission site</strike> live.</li>
+     <li><a href="http://scheme-2013.eventbrite.com">Registration</a> live.</li>
+     -->
+   </ul>
+   
+ </div>
+
+
+ 
+
+
+ 
+ </div> <!-- /main -->
+ 
+
+ <div id="contents" style="float: left; width: 725px; ">
+
+
+<!--
+ <div id="news" class="module unit">
+
+ <h2>News</h2>
+
+ <ul>
+   <li><b>27 June 2013</b>: Submission dates selected.</li>
+   <li><b>27 June 2013</b>: Site live.</li>
+ </ul>
+   
+ </div> 
+-->
+
+<!--
+ <div id="registration" class="module unit" style="display: none">
+
+   <h2>Registration</h2>
+
+
+   <p>
+   </p>
+
+   <p>
+   You can register to attend this workshop 
+   through the <a href="http://splashcon.org/2013/attending/registering">SPLASH registration system</a>:
+   </p>
+
+   <p style="text-align: center;">
+    <a href="http://splashcon.org/2013/attending/registering">http://splashcon.org/2013/attending/registering</a>
+   
+
+  </p><p>
+  If you only wish to attend the Scheme workshop,
+  choose the SPLASH "1-Day Workshops/Symposia" option.
+  </p>
+
+  </div>
+-->
+
+   
+<!--
+    <p>
+   Download all accepted papers: 
+   [<a href="http://www.schemeworkshop.org/2013/papers.zip">papers.zip</a>]
+   </p>
+-->
+
+ <div id="program" class="module unit">
+
+   <h2>Program</h2>
+
+    <p>
+   Download all accepted papers: 
+   [<a href="papers.zip">papers.zip</a>]
+   </p>
+   
+   <table>
+
+<!--
+   <tbody><tr style="color: grey;">
+   <td style="width: 4em;">7:30</td>
+   <td>Continental Breakfast (ends at 8:30)</td>
+   </tr>
+-->
+
+   <tbody><tr>
+   <td style="width: 4em;">8:00</td>
+   <td>Registration</td>
+   </tr>
+
+   <tr>
+   <td style="width: 4em;">8:55</td>
+   <td>Welcome/opening remarks
+     <p> </p></td>
+   </tr>
+     
+   <tr>
+   <td colspan="2">
+   <center><b>Keynote</b></center>
+   </td>
+   </tr>
+
+   <tr>
+   <td style="width: 4em;">9:00</td>
+   <td>Keynote: Alexey Radul</td>
+   </tr>
+
+   <tr style="color: grey;">
+   <td style="width: 4em;">10:00</td>
+   <td>Break
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td colspan="2">
+   <center><b>Session 1 (Static Analysis)</b></center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>10:30</td>
+   <td><i>Entangled Abstract Domains for Higher-order Programs</i>
+   <br>
+   Authors: Shuying Liang and Matthew Might
+
+   <br>
+    Paper: [<a href="papers/Liang2013.pdf">pdf</a>]
+<!-- Paper: [<a href="http://www.schemeworkshop.org/2013/papers/Atkinson2011.pdf">pdf</a>] -->
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td>10:55</td>
+   <td>
+   <i>Multi-core Parallelization of Abstract Abstract Machines</i>
+   <br>
+   Authors: Leif Anderson and Matthew Might 
+
+   <br>
+   Paper: [<a href="papers/Andersen2013.pdf">pdf</a>]
+<!-- Paper: [<a href="http://www.schemeworkshop.org/2013/papers/Alvis2011.pdf">pdf</a>] -->
+   <p> </p>
+   </td>
+   </tr>
+
+<!--
+   <tr style="color: grey;">
+   <td style="width: 4em;">11:05</td>
+   <td>Break</td>
+   </tr>
+-->
+   <tr>
+   <td>11:20</td>
+   <td>
+   <i>A Unified Approach to Polyvariance in Abstract Interpretations</i>
+   <br>
+   Authors:  Thomas Gilray and Matthew Might
+   <br>
+   Paper: [<a href="papers/Gilray2013.pdf">pdf</a>]
+<!-- Paper: [<a href="http://www.schemeworkshop.org/2013/papers/Keep2011.pdf">pdf</a>] -->
+   <p> </p>
+   </tr>
+   
+   
+   <tr>
+   <td style="width: 4em;">11:45</td>
+   <td>Lunch Break
+   <p> </p>
+   </td>
+   </tr>
+
+   
+   <tr>
+   <td colspan="2">
+   <center><b>Session 2 (miniKanren)</b></center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>2:00</td>
+   <td>
+   <i>microKanren: A minimal functional core for relational programming</i>
+   <br>   
+   Authors: Jason Hemann and Daniel P. Friedman
+   <br>
+   Paper: [<a href="papers/HemannMuKanren2013.pdf">pdf</a>]
+   <!-- Paper: [<a href="http://www.schemeworkshop.org/2013/papers/Serrano2011.pdf">pdf</a>] -->
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td>2:25</td>
+   <td>
+   <i>rKanren: Guided Search in miniKanren</i>
+   <br>
+   Authors:  Cameron Swords and Daniel P. Friedman
+   <br>
+   Paper: [<a href="papers/Swords2013.pdf">pdf</a>]
+<!-- Paper: [<a href="http://www.schemeworkshop.org/2013/papers/Scholliers2011.pdf">pdf</a>] -->
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr style="color: grey;">
+   <td style="width: 4em;">2:50</td>
+   <td>Break
+   <p> </p>
+   </td>
+   </tr>
+
+
+   <tr>
+   <td colspan="2">
+   <center><b>Session 3 (General Scheming)</b></center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>3:15</td>
+   <td>
+   <i>lambda*: Beyond Currying</i>
+   <br>
+   Authors: Jason Hemann and Daniel P. Friedman
+   <br>
+   Paper: [<a href="papers/HemannCurrying2013.pdf">pdf</a>]
+<!-- Paper: [<a href="http://www.schemeworkshop.org/2013/papers/Hsu2011.pdf">pdf</a>] -->
+   <p> </p>
+   </td>
+   </tr>
+
+
+   <tr>
+   <td>3:40</td>
+   <td>
+
+   <i>Automatic Cross-Library Optimization</i>
+   <br>
+   Authors: Andrew Keep and Kent Dybvig
+   <br>
+   Paper: [<a href="papers/Keep2013.pdf">pdf</a>]
+<!-- Paper: [<a href="http://www.schemeworkshop.org/2013/papers/Barzilay2011.pdf">pdf</a>] -->
+   <p> </p>
+   </td>
+   </tr>
+
+<!--
+   <tr style="color: grey">
+   <td style="width: 4em;">3:30</td>
+   <td>Break</td>
+   </tr>
+-->
+
+<!--
+   <tr>
+   <td colspan="2">
+   <center><b>Standardization Session</b></center>
+   </td>
+   </tr>
+-->
+   
+   <tr>
+   <td>4:05</td>
+   <td>
+   <em>R7RS Scheme Standardization Update</em>
+   <br>
+   Will Clinger
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td colspan="2">
+   <center><b>After Hours Event</b></center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>8:30</td>
+   <td>
+   <em>Schemers and Clojurers Unite for Great Justice!</em><br>
+   Mingle with Schemers and Clojurers, and talk about Lispy things!
+   <br>
+   Upstairs room,
+   <a href="http://murphyspub.com/murphys/alexandria/parties/">Murphy's Grand Irish Pub, 713 King Street</a>
+   </td>
+   </tr>
+
+   </tbody></table>
+
+ </div>
+
+
+<!--
+ <div id="keynote" class="module unit">
+
+   <h2>Keynote</h2>
+
+   <p>
+     <a href="http://alexey.radul.name/">Alexey Radul</a> will be
+     presenting the keynote address.  Alexey is well-known for his
+     work with Gerald Jay Sussman on propagator networks
+     (<a href="http://dspace.mit.edu/handle/1721.1/44215"><em>The Art
+     of the Propagator</em></a>).
+   </p>
+   
+     <b>Title:</b> TBA
+      
+ </div>
+-->
+
+<!--
+ <div id="papers" class="module unit">
+
+   <h2>Accepted Papers</h2>
+
+   <p>
+<i>Automatic Cross-Library Optimization</i><br />
+Andrew Keep and Kent Dybvig
+   </p>
+
+   <p>   
+<i>Entangled Abstract Domains for Higher-order Programs</i><br />
+Shuying Liang and Matthew Might
+   </p>
+
+   <p>
+<i>lambda*: Beyond Currying</i><br />
+Jason Hemann and Daniel P. Friedman
+   </p>
+
+   <p>
+<i>mu-Kanren: Less is More</i><br />
+Jason Hemann and Daniel P. Friedman
+   </p>
+
+   <p>
+<i>Multi-core Parallelization of Abstract Abstract Machines</i><br />
+Leif Anderson and Matthew Might
+   </p>
+
+   <p>
+<i>rKanren: Guided Search in miniKanren</i><br />
+Cameron Swords and Daniel P. Friedman
+   </p>
+
+   <p>
+<i>A Unified Approach to Polyvariance in Abstract Interpretations</i><br />
+Thomas Gilray and Matthew Might
+   </p>
+
+ </div>
+-->
+ 
+
+
+ <div id="topics" class="module unit">
+
+   <h2>Topics</h2>
+
+
+<p>
+The workshop invites submissions related to Scheme and functional programming.
+</p>
+
+<p>
+<b>We also welcome submissions related to dynamic or multiparadigmatic languages and programming techniques.</b>
+</p>
+
+<p>
+The following topics are especially encouraged:
+</p>
+
+<table>
+
+<tbody><tr>
+<td>
+
+<ul>
+
+ <li> compiler-implementation techniques; </li>
+
+ <li> compiler optimization; </li>
+
+ <li> continuations; </li>
+
+ <li> data structures;</li>
+
+ <li> domain-specific languages; </li>
+
+ <li> commercial applications of Scheme;</li>
+
+ <li> computational reflection; </li>
+
+ <li> contracts; </li>
+
+ <li> education; </li>
+
+ <li> garbage collection; </li>
+
+ <li> higher-order programming; </li>
+
+</ul>
+
+</td><td>
+</td><td>
+
+<ul>
+
+ <li> language-based security; </li>
+
+ <li> language design;  </li>
+
+ <li> macros and hygiene; </li>
+
+ <li> mixing static and dynamic typing;</li>
+
+ <li> module systems; </li>
+ 
+ <li> partial evaluation; </li>
+ 
+ <li> semantics; </li>
+
+ <li> static analysis; </li>
+ 
+ <li> syntactic extensibility;</li>
+
+ <li> tools and packages; and </li>
+
+ <li> web-based development. </li>
+
+</ul>
+
+</td>
+</tr>
+</tbody></table>
+
+
+  
+   
+ </div> <!-- /topics -->
+
+
+
+
+ <div id="submission" class="module unit" style="display: block;">
+
+ <h2>Submission requirements</h2>
+
+  
+<p>
+
+  
+ </p><p>
+Submissions must be in ACM proceedings format, <strike>9-point</strike> <b>10-point</b> type.
+
+Microsoft Word and LaTeX templates for this format are available at:
+
+</p><div style="text-align: center; margin-bottom: 15px;">
+<a href="http://www.acm.org/sigs/sigplan/authorInformation.htm">http://www.acm.org/sigs/sigplan/authorInformation.htm</a>
+</div>
+
+<p></p>
+
+<p>
+Submissions should be in PDF and printable on US Letter.
+</p>
+
+<p> There is no maximum length limit on submissions, but it is the
+responsibility of the authors to keep reviewers motivated.  
+  
+ If the initial part of the paper is uninteresting, reviewers are not
+obligated to continue reading.  </p>
+
+<p>
+<strike>Good submissions will likely be in the range of 6 to 12 pages (perhaps slightly longer, given the increased font size).</strike>
+
+<br />
+
+<b>To encourage authors to submit their best work, this year we are encouraging shorter papers (around 6 pages, excluding references).  This is to allow authors to submit longer, revised versions of their papers to archival conferences or journals.  Longer papers (10--12 pages) are also acceptable, if the extra space is needed.</b>
+
+</p>
+
+<p>
+Proceedings will be printed as a University of Utah Technical Report.
+</p>
+
+<p> 
+
+Publication of a paper at this workshop is not intended to replace 
+conference or journal publication, and does not preclude re-publication 
+of a more complete or finished version of the paper at some later 
+conference or in a journal.
+
+</p>
+
+ </div>
+
+
+ <div id="location" class="module unit">
+
+   <h2>Location</h2>
+
+   <b>Workshop</b> (9:00 am -- 4:30 pm)<br>
+   Mason Room, Embassy Suites Alexandria - Old Town<br>
+   <p> </p>
+   
+   <b>After-hours event</b> (8:30 pm -- whenever)<br>
+   <em>Schemers and Clojurers Unite for Great Justice!</em><br>
+   Upstairs room, <a href="http://murphyspub.com/murphys/alexandria/parties/">Murphy's Grand Irish Pub</a>, 713 King Street, Alexandria VA
+
+ </div>
+
+
+ <div id="sponsors" class="module unit">
+
+   <h2>Corporate Sponsor</h2>
+
+   <img class="displayed" src="Cisco_logo.png" alt="Cisco logo" height="125">
+   
+ </div>
+ 
+
+<div id="organizers" class="module unit">
+
+ <h2>Organizers</h2>
+   
+ <table>
+   <tbody><tr>
+     <td style="width: 200px; "><b>Chair</b></td>
+     <td><a href="http://webyrd.net/">William E. Byrd</a>, University of Utah</td>
+   </tr>
+
+   <tr>
+     <td><b>Program Committee</b></td>
+
+     <td>
+     <a href="http://www.namin.net/">Nada Amin</a>, EPFL
+     </td>
+
+     </tr><tr><td></td><td>
+     Ryan Culpepper, Northeastern University
+     </td></tr>
+   
+     </tr><tr><td></td><td>
+     <a href="http://users.soe.ucsc.edu/~cormac/">Cormac Flanagan</a>, UC Santa Cruz
+     </td></tr>
+
+     </tr><tr><td></td><td>
+     <a href="http://www.cs.ubc.ca/~rxg/">Ronald Garcia</a>, University of British Columbia
+     </td></tr>
+
+     </tr><tr><td></td><td>
+     <a href="http://www.stanford.edu/~ngoodman/">Noah Goodman</a>, Stanford
+     </td></tr>
+
+     </tr><tr><td></td><td>
+     Dave Herman, Mozilla Research
+     </td></tr>
+
+     </tr><tr><td></td><td>
+     Andrew W. Keep, University of Utah
+     </td></tr>
+
+     </tr><tr><td></td><td>
+     <a href="http://pagesperso-systeme.lip6.fr/Julia.Lawall/">Julia Lawall</a>, INRIA/LIP6
+     </td></tr>
+
+     </tr><tr><td></td><td>
+     Jacob Matthews, Google
+     </td></tr>
+
+     </tr><tr><td></td><td>
+     <a href="http://swannodette.github.io">David Nolen</a>, New York Times
+     </td></tr>
+  
+  </tbody></table>
+
+
+ </div> <!-- /pc -->
+
+ 
+
+
+
+
+ </div> <!-- /contents -->
+
+
+
+</div> <!-- /container -->
+
+
+
+
+<script src="http://webyrd.net/scheme-2013/Scheme%202013%20_%20Workshop%20on%20Scheme%20and%20Functional%20Programming_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21336116-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+</body></html>

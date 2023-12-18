@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="William D Clinger"/>
+
+<title>
+Abstract:
+Implementing continuation marks in JavaScript
+</title>
+<link type="text/css"
+      rel="stylesheet"
+      href="sw2008.css"/>
+
+</head>
+
+<body>
+
+<h2>
+Implementing continuation marks in JavaScript
+</h2>
+
+<p>
+John Clements, Ayswarya Sundaram, David Herman
+</p>
+
+<table class="narrow">
+  <tr>
+    <td>
+      MzScheme's continuation marks provide a flexible mechanism
+      for implementing a number of useful language features and
+      tools.  We demonstrate the simplicity and utility of
+      continuation marks by adapting them for JavaScript as
+      frame-based stack marks using the Rhino implementation,
+      showing a simple model of their behavior, and using
+      them to build a toy debugger.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Along the way, we discover a few interesting things.
+      First, it requires some thinking---but not much code---to
+      add continuation marks to JavaScript.  Second, coupling
+      tail-calling with the "return" of statement-based
+      languages leads to some interesting problems in
+      formulating a semantics.  Third, building a debugger
+      based on continuation marks highlights (by its absence)
+      the elegance of Scheme's simple syntax and hygienic
+      macro system.
+    </td>
+  </tr>
+</table>
+
+<hr/>
+
+<p>
+Last updated 19 August 2008.
+</p>
+
+<hr />
+
+<p>
+    <a href="http://validator.w3.org/check/referer"><img
+       style="border:0;width:88px;height:31px"
+       src="http://www.w3.org/Icons/valid-xhtml10-blue"
+       alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+
+</body>
+</html>

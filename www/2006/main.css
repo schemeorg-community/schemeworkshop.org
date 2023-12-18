@@ -1,0 +1,187 @@
+body {
+  // font-family: sans-serif;
+  font-family: Lucida Grande, Geneva, Arial, Helvetica, Swiss,
+               SunSans-Regular, sans-serif;
+}
+
+div.funnyfont {
+  font-family:  Georgia, Bookman, Times New Roman, Times, serif;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size:   150%;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size:   120.5%;
+  font-weight: bolder;
+}
+
+h3 {
+  font-family: sans-serif;
+  font-size:   110%;
+  font-weight: bolder;
+}
+
+.section-head {
+  font-family: "Arial Black" sans-serif;
+  font-size:   120%;
+  font-weight: bolder;
+}
+
+.date {
+  font-family: sans-serif;
+}
+
+.code {
+  font-family: monospace;
+  white-space: nowrap; /* pre would be better, but it doesn't work with IE */
+}
+
+.codebox {
+  font-family: monospace;
+  background-color: #E0E0E0;
+  width: auto;
+  margin: 10px 40px;
+  padding: 4px;
+  border-style: double solid;
+  border-width: thick thin;
+  border-color: black;
+}
+
+.var {
+  font-family: serif;
+  font-style:  italic;
+  white-space: nowrap;
+}
+
+.warn-line {
+  background-color: #FF8080;
+  font-weight: bold;
+  font-size: 125%;
+  text-align: center;
+}
+
+.container {
+  width: 500;
+  padding: 25px;
+  background: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.summary {
+  font-family:  Georgia, Bookman, Times New Roman, Times, serif;
+  padding-left:   70px;
+  padding-right:  70px;
+  text-indent:     0px;
+  padding-top:    20px;
+  padding-bottom: 30px;
+}
+
+div.summary p {
+ text-indent:     0px;
+ padding-left: 0px;
+ padding-right: 0px;
+}
+
+table.languagetable {
+  font-family:  Courier New, Courier, monospace;
+  padding-left:  140px;
+  padding-right: 140px;
+  padding-top:    20px;
+  padding-bottom: 30px;
+}
+
+table.languagetable td {
+  vertical-align: top;
+}
+
+.footer {
+  font-family: serif;
+  font-style:  italic;
+  font-size:   75%;
+  position: static;
+  margin-top: 30px;
+  bottom: 0px;
+  right:  0px;
+  padding: 4px;
+  text-align: right;
+}
+.footer a:link {
+  color: #a0a0ff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* cute link colors */
+a:link {
+  color: #502010;
+  background-color: transparent;
+}
+a:visited {
+  color: #502010;
+  background-color: transparent;
+}
+a:active {
+  color: #600000;
+  background-color: yellow;
+}
+a:hover {
+  color: #600000;
+  background-color: yellow;
+}
+
+/* navbar (used for top navbar and section tocs) */
+.navbar {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:link {
+  color: #103010;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:visited {
+  color: #103010;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:active {
+  color: #600000;
+  background-color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #600000;
+  background-color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* current link */
+.disabled {
+  color: #606060;
+}
+
+div.faq {
+  margin-bottom: 1em;
+  padding-right: 20px;
+}
+
+div.faq div.q {
+  // background-color: #c4c4e0;
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 0.5em;
+  text-indent: 0px;
+}

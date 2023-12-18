@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="William D Clinger"/>
+
+<title>
+Abstract:
+The layers of Larceny's foreign function interface
+</title>
+<link type="text/css"
+      rel="stylesheet"
+      href="sw2008.css"/>
+
+</head>
+
+<body>
+
+<h2>
+The layers of Larceny's foreign function interface
+</h2>
+
+<p>
+Felix S Klock II
+</p>
+
+<table class="narrow">
+  <tr>
+    <td>
+      The Foreign Function Interface (FFI) in Larceny supports
+      interacting with dynamically loaded C libraries via glue
+      code written in Scheme.  The programmer does not need to
+      develop any C code to interface with C libraries.
+      The FFI is divided into layers of Larceny Scheme code;
+      the lowest layers implement kernel functionality, and
+      the higher layers support portable glue code development.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      The lower level has two main features of interest.
+      First, the FFI supports callbacks: objects that look
+      like simple function pointers to C but actually invoke
+      Scheme closures when called.  This requires generating
+      specialized machine code, and is further complicated
+      by the potential movement of the closures during
+      garbage collections.  Second, Larceny heaps can be
+      dumped to disk and reloaded during a fresh runtime
+      execution.  The FFI automatically relinks the foreign
+      procedures in such heaps.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      The higher level layers provide macros and procedures
+      for extracting information from header files and
+      dictating how C values translate to Scheme values
+      and vice versa.  Using the provided tools reduces
+      the amount of human effort needed to develop portable
+      glue code.  The macros have simple implementations
+      and do not require much Larceny-specific functionality;
+      they may be useful for writing FFI code on other
+      Scheme systems.
+    </td>
+  </tr>
+</table>
+
+<hr/>
+
+<p>
+Last updated 23 July 2008.
+</p>
+
+<hr />
+
+<p>
+    <a href="http://validator.w3.org/check/referer"><img
+       style="border:0;width:88px;height:31px"
+       src="http://www.w3.org/Icons/valid-xhtml10-blue"
+       alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+
+</body>
+</html>

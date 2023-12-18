@@ -1,0 +1,102 @@
+From: Michael Sperber <sperber@informatik.uni-tuebingen.de>
+Date: October 6, 2005 12:05:58 PM CDT
+To: Mitchell Wand <wand@ccs.neu.edu>
+Subject: Notes on chairing the Scheme workshop
+
+
+If you're going to chair a Scheme workshop ...
+==============================================
+Mike Sperber, September 28, 2005
+
+- Find out who the ICFP workshop organizers are and when the
+  *deadline for workshop proposals* is.  Get cracking before that
+  deadline.
+
+- Write up a CFP.  Either copy one from the past (but then make sure
+  you approve of it) or write a new one.  Submit it before the
+  deadline.
+
+- Put together a PC.  Bigger isn't better---six (including the
+  chair(s)) has proven sufficient.
+
+- Find out the various deadlines from the workshop organizers.  Ask
+  them for it if they don't send it to you on their own initiative.
+
+- Consider possible publication or non-publication venues, such as
+  tech reports at some university, LNCS or FIXME EATCS.  If you want
+  to do LNCS, start the negotiations with them *as early as possible*.
+
+- Make up a timeline leading up to the conference, listing submission
+  deadline, notification deadline, final paper deadline, and the
+  workshop date itself.  Communicate those deadlines to the workshop
+  organizers.  More on deadline issues below.
+
+- Set up a website with all the relevant information.  Look at the
+  homepages of previous workshops for samples.
+
+- Send out the CFP early.  If at all possible, *before the Haskell
+  people do*.  Here's a suggestion for an email header listing the
+  most important addresses you might send it to:
+
+Newsgroups: comp.lang.scheme, comp.lang.functional, comp.lang.lisp
+Followup-To: comp.lang.scheme
+To: rrrs-authors@martigny.ai.mit.edu, scheme-48@s48.org,
+ bigloo@sophia.inria.fr, kawa@sources.redhat.com,
+ plt-scheme@list.cs.brown.edu, stk@kaolin.unice.fr,
+ chicken-users@nongnu.org, scsh-users@scsh.net,
+ sisc-users@lists.sourceforge.net, jscheme-user@lists.sourceforge.net,
+ schematics-users@lists.sourceforge.net, guile-user@gnu.org,
+ rscheme@rscheme.org, ll-discuss@lists.csail.mit.edu
+
+  (You might get back some moderation bounces---follow up on them if
+  necessary.)
+
+- Send out 2nd, 3rd CFPs periodically, every 2-4 weeks leading up to
+  the submission deadlines.
+
+- Expect to accept most papers if you want to fill the day with
+  presentations.  Consider soliciting papers you've long wanted to
+  see.  A good source are the SRFIs, and there's still a supply of
+  SRFIs whose design story would make a good paper.
+
+- Expect submissions from people new at writing papers, and without a
+  CS department that could help them write well.  Consider shepherding
+  those papers to make them better.
+
+- If you don't expect a large crowd, print the proceedings locally (or
+  xerox them at your employer) and bring them with you on the plane.
+  Check in advance how long printing and binding will take.  Expect
+  that you'll need twice as many proceedings as you expect
+  participants.  (2005 required 44 copies of the proceedings.)  If you
+  use the conference arrangements (usually through Sheridan printing)
+  make sure you find out the deadlines---but going through them will
+  probably cost you four weeks or more that you'll have to factor into
+  the scheduling of the deadlines.
+
+- VERY IMPORTANT: When dealing with the PC, make sure you spell out
+  all the deadlines clearly as early as possible, and remind them of
+  deadlines frequently.  Make the deadlines a few days earlier than
+  what you actually need.
+
+- For all important email communication (i.e., most of it), *require
+  confirmation*.  (This point can't be overemphasized.)
+
+- Because of the unreliability of email communication, consider using
+  Shriram's conference management system if he'll let you.
+
+- Set up your typesetting infrastructure early.  Create a dummy test
+  proceedings early with one or two dummy papers.  Find out what kind
+  of software the previous chair used to put together the PostScripts
+  or PDF files into the proceedings.  Consider requiring people to
+  send in LaTeX source, at least for the final submission, as putting
+  together PostScript files from different sources can cause trouble
+  with fonts.
+
+- Before publishing the program, check with the conference organizers
+  about constraints about scheduling, coffee breaks, and so on.
+
+
+
+--=-=-=-
+
+

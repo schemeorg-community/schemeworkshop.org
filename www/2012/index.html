@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Scheme 2012 :: Workshop on Scheme and Functional Programming</title>
+
+
+<style>
+/* CSS reset */
+
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+
+<style>
+
+div#contents ul{
+  list-style: circle ;
+  margin-left: 20px ;
+}
+
+div#contents ol{
+  list-style: decimal ;
+  margin-left: 20px ;
+}
+
+div#contents ol li {
+  margin-top: 15px ;
+}
+
+
+
+div#contents li {
+  margin-left: 20px; 
+}
+
+a {
+ text-decoration: none ;
+}
+
+p {
+ margin-bottom: 15px ;
+}
+
+body {
+ padding-top: 10px ;
+ font-family: Palatino, Optima, Calibri, Tahoma, Helvetica, Arial, Georgia ;
+ background-color: #cccccc ;
+ /*background-image: url(http://scheme2011.ucombinator.org/FCRC2011-mini.png) ;*/
+ background-repeat: no-repeat ;
+ color: #282828 ;
+}
+
+div.module {
+ float: left ;
+ border: 1px solid #777777;
+ -moz-border-radius: 6px ;
+ -webkit-border-radius: 6px ;
+ border-radius: 6px ;
+ background-color: #eeeeee ;
+ margin: 10px ;
+ padding: 20px ;
+}
+
+div.main-unit {
+ width: 400px;
+}
+
+div.unit {
+ width: 620px;
+ padding: 40px; 
+}
+
+
+div#container{
+ margin-left: auto ;
+ margin-right: auto ;
+ width: 780px;
+ padding: 0px;
+}
+
+div#contents {
+ margin-left: auto ;
+ margin-right: auto ;
+ width: 780px;
+ padding: 0px;
+}
+
+div#main {
+ width: 440px ;
+ float: left ;
+ padding: 0px;
+ margin: 0px ;
+}
+
+div#header {
+ /* color: #ffffff ; */
+ /* height: 50px; */
+ /* background-image: url(sanjose-night2.png) ; */
+ padding-top: 10px ;
+}
+
+
+div#navbar {
+ float: left ;
+ width: 200px ;
+}
+
+h2 {
+ text-align: center ;
+ font-size: 115% ;
+ margin-bottom: 20px ;
+}
+
+h3 {
+  margin-bottom: 15px ;
+}
+
+div#main td {
+ padding-right: 10px ;
+}
+
+div#header-area {
+ float: left;
+ width: 380px;
+}
+
+div#header-title {
+ float: left;
+ font-size: 44px;
+}
+
+div#header-subtitle {
+ float: left;
+ margin-left: 25px;
+ font-size: 18px;
+ margin-top: 4px;
+}
+
+div#fcrc-notice {
+ float: left ;
+ width: 370px ;
+ font-weight: bold ;
+ margin-left: 3px ;
+ font-size: 14px ;
+}
+
+div#fcrc-notice a {
+ color: blue ;
+}
+
+td {
+ padding-bottom: 6px ;
+}
+
+div#navbar h2 {
+ margin-bottom: 10px ;
+}
+
+h2.important {
+ color: #ff3333 ;
+}
+
+div.schedule {
+ padding-left: 20px ;
+}
+
+table.schedule td {
+  border: 1px solid black ;
+  padding: 10px ;
+}
+
+
+</style>
+
+
+<!--[if gte IE 6]>
+<style>
+div#header {
+ color: black ;
+ background-image: url(not-found.jpg) ;
+ height: 120px ;
+}
+
+div#header-area {
+ margin-top: 5px ;
+ float: none ;
+ height: 110px ;
+ display: block ;
+}
+
+div#header-title {
+ float: none ;
+ font-size: 44px;
+ height: 50px ;
+ display: block ;
+}
+
+div#header-subtitle {
+ float: none ;
+ height: 50px ;
+ display: block ;
+ font-size: 18px;
+ margin-top: 4px;
+ margin-left: 0px ;
+}
+
+div#fcrc-notice {
+ float: none;
+ display: block ;
+ width: 370px ;
+ font-size: 100% ; 
+ font-weight: bold ;
+ color: black ;
+ margin-left: 0px;
+}
+
+
+div#fcrc-notice a {
+ color: blue ;
+}
+
+</style>
+<![endif]-->
+
+
+
+</head>
+
+<body>
+
+<div id="container">
+
+
+ <div id="navbar" class="module">
+   
+   <h2 class="important">Important dates</h2>
+
+   <table>
+
+    <tr>
+      <td>Submission:</td>
+      <td>&nbsp;</td>
+      <td><b>13</b>&nbsp;</td> <td>Aug&nbsp;</td> <td>2012</td>
+    </tr>
+
+    <tr>
+      <td>Notification:</td>
+      <td>&nbsp;</td>
+      <td>30</td> <td>Aug</td> <td>2012</td>
+    </tr>    
+
+    <tr>
+      <td>Camera-ready:</td>
+      <td>&nbsp;</td>
+      <td>7</td> <td>Sep</td> <td>2012</td>
+    </tr>    
+
+    <tr>
+      <td>Workshop:</td>
+      <td>&nbsp;</td>
+      <td>9</td> <td>Sep</td> <td>2012</td>
+    </tr>    
+
+
+
+   </table>
+
+   
+  <br />
+
+   <h2 class="important">Important links</h2>
+   <ul>
+   <li>
+    <!--<strike>-->
+    <a href="programme-sfp12.html">Programme</a>
+    <!--</strike>-->
+   </li>
+   <li>
+    <!--<strike>-->
+    <a href="http://users-cs.au.dk/danvy/sfp12-submission/">Paper submission</a>
+    <!--</strike>-->
+   </li>
+    
+    <!--
+    <li>
+    <b>NEW:</b>
+    <a href="http://splashcon.org/2011/attending/registering">Registration</a>
+    </li>
+    -->
+
+   </ul>
+
+   <br />
+
+   <h2>Connect</h2>
+
+   <ul>
+     <li>Twitter: <a href="http://www.twitter.com/schemeworkshop/">@schemeworkshop</a></li>
+   </ul>
+   
+   <br />
+
+   <a href="http://www.acm.org/sigplan/"><img border="0" align="left" src="acmlogo.gif"></a>
+
+ </div>
+
+
+ <div id="main">
+
+ <div id="header" class="module main-unit">
+
+   <div id="header-area" style="">
+
+     <div id="header-title"><b>Scheme '12</b></div>
+
+     <div id="header-subtitle">
+         <b>9 September 2012</b>
+         <br />
+         <b>Copenhagen, Denmark</b>
+     </div>
+
+
+     <div id="fcrc-notice">
+       <br />
+       In conjunction with <a href="http://icfpconference.org/icfp2012/">ICFP 2012</a>
+     </div>
+     
+   </div>
+
+
+ </div> <!-- /header -->
+
+ <div id="definition" class="module main-unit">
+  <b>Scheme 2012</b> is the annual <a href="http://www.schemeworkshop.org/">Workshop on Scheme and Functional Programming</a>.
+<!-- (ACM SIGPLAN sponsorship pending.) -->
+It is sponsored by ACM SIGPLAN.
+ </div>
+
+
+ <div id="news" class="module main-unit">
+
+ <ul>
+   <!--<a href="http://splashcon.org/2011/attending/registering">Register</a> <b>before 23 Sep</b> for early registration discounts!-->
+
+   <li><b>05 Sep</b>: The programme is <a href="programme-sfp12.html">online</a>.</li>
+   <li><b>06 Aug</b>: The submission site is now <a href="http://users-cs.au.dk/danvy/sfp12-submission/">open for submissions</a>.</li>
+   <li><b>12 Jul</b>: ACM SIGPLAN endorsement.</li>
+   <li><b>06 Jul</b>: Kurt N&oslash;rmark accepted to give an
+   invited talk on "Scheme on the Web and in the Classroom - a Retrospective about the LAML Project".</li>
+   <li><b>28 May</b>: Website and submission site live.</li>
+ </ul>
+
+ </div>
+
+
+
+
+
+ 
+ </div> <!-- /main -->
+ 
+
+ <div id="contents" style="float: left; width: 725px; ">
+
+
+<!--
+ <div id="news" class="module unit">
+
+ <h2>News</h2>
+
+ <ul>
+   <li><b>28 May 2012</b>: Website and submission site live.</li>
+ </ul>
+   
+ </div> 
+-->
+
+<!--
+ <div id="registration" class="module unit" style="display: none">
+
+   <h2>Registration</h2>
+
+
+   <p>
+   </p>
+
+   <p>
+   You can register to attend this workshop 
+   through the <a href="http://splashcon.org/2011/attending/registering">SPLASH registration system</a>:
+   </p>
+
+   <p style="text-align: center;">
+    <a href="http://splashcon.org/2011/attending/registering">http://splashcon.org/2011/attending/registering</a>
+   </pp>
+
+  <p>
+  If you only wish to attend the Scheme workshop,
+  choose the SPLASH "1-Day Workshops/Symposia" option.
+  </p>
+
+  </div>
+-->
+
+
+ <div id="topics" class="module unit">
+
+   <h2>Topics</h2>
+
+
+<p>
+The workshop invites submissions related to Scheme and functional programming.
+</p>
+
+<p>
+We also welcome submissions related to dynamic or multiparadigmatic languages and programming techniques.
+</p>
+
+<p>
+The following topics are especially encouraged:
+</p>
+
+<table>
+
+<tr>
+<td>
+
+<ul>
+
+ <li> compiler-implementation techniques; </li>
+
+ <li> compiler optimization; </li>
+
+ <li> continuations (naturally); </li>
+
+ <li> data structures;</li>
+
+ <li> domain-specific languages; </li>
+
+ <li> commercial applications of Scheme;</li>
+
+ <li> computational reflection; </li>
+
+ <li> contracts; </li>
+
+ <li> education; </li>
+
+ <li> garbage collection; </li>
+
+ <li> higher-order programming; </li>
+
+</ul>
+
+<td>
+<td>
+
+<ul>
+
+ <li> language-based security; </li>
+
+ <li> language design;  </li>
+
+ <li> macros and hygiene; </li>
+
+ <li> mixing static and dynamic typing;</li>
+
+ <li> module systems; </li>
+ 
+ <li> partial evaluation; </li>
+ 
+ <li> semantics; </li>
+
+ <li> static analysis; </li>
+ 
+ <li> syntactic extensibility;</li>
+
+ <li> tools and packages; and </li>
+
+ <li> web-based development. </li>
+
+</ul>
+
+</td>
+</tr>
+</table>
+
+
+  
+   
+ </div> <!-- /topics -->
+
+
+
+
+
+
+
+
+ <div id="submission" class="module unit" style="display: block;">
+
+ <h2>Submission requirements</h2>
+
+  
+<p>
+
+  
+ <p>
+Submissions must be in ACM proceedings format, 9-point or 10-point type.
+
+Microsoft Word and LaTeX templates for this format are available at:
+
+<div style="text-align: center; margin-bottom: 15px;">
+<a href="http://www.acm.org/sigs/sigplan/authorInformation.htm">http://www.acm.org/sigs/sigplan/authorInformation.htm</a>
+</div>
+
+</p>
+
+<p>
+Submissions should be in PDF and printable on US Letter or A4 paper.
+</p>
+
+<p> There is no maximum length limit on submissions, but it is the
+responsibility of the authors to keep reviewers motivated.  
+For example,
+if the initial part of the paper feels uninteresting, reviewers are not
+obligated to continue reading.  </p>
+
+<p>
+Good submissions will likely be in the range of 6 to 12 pages.
+Pearls are welcome as well.
+</p>
+
+<p>
+Proceedings will be available online.
+</p>
+
+<p> 
+
+Publication of a paper at this workshop is not intended to replace conference or journal publication, and does not preclude re-publication of a more complete or finished version of the paper at some later conference or in a journal.
+
+</p>
+
+<p>
+Drafts or full papers may be submitted at any time to:
+</p>
+
+<center>
+ <a href="http://users-cs.au.dk/danvy/sfp12-submission/">http://users-cs.au.dk/danvy/sfp12-submission/</a>
+</center>
+
+
+ </div> <!-- /submission -->
+
+
+
+<div id="organizers" class="module unit">
+
+ <h2>Organizers</h2>
+   
+ <table>
+   <tr>
+     <td style="width: 200px; "><b>Chair</b></td>
+     <td><a href="http://cs.au.dk/~danvy/">Olivier Danvy</a>, Aarhus University</td>
+   </tr>
+   <tr><td/><td/></tr>
+
+ <tr><td><b>Program Committee</b></td>
+     <td><a href="http://www.cs.indiana.edu/~adamsmd/">Michael Adams</a>, PSU</td></tr>
+ <tr><td></td><td><a href="http://stephane.ducasse.free.fr/">St&eacute;phane Ducasse</a>, INRIA Lille Nord Europe</td></tr>
+ <tr><td></td><td><a href="http://www.cs.usask.ca/faculty/cjd032">Christopher Dutchyn</a>, University of Saskatchewan</td></tr>
+ <tr><td></td><td><a href="http://www.cs.purdue.edu/homes/suresh/">Suresh Jagannathan</a>, Purdue University</td></tr>
+ <tr><td></td><td><a href="http://pagesperso-systeme.lip6.fr/Julia.Lawall/">Julia L. Lawall</a>, INRIA</td></tr>
+ <tr><td></td><td><a href="http://florian.loitsch.com/">Florian Loitsch</a>, Google</td></tr>
+ <tr><td></td><td><a href="https://cs.byu.edu/faculty/mccarthy_jay">Jay McCarthy</a>, Brigham Young University</td></tr>
+ <tr><td></td><td><a href="http://people.cs.aau.dk/~normark/">Kurt N&oslash;rmark</a>, Aalborg University</td></tr>
+ <tr><td></td><td><a href="http://www.cs.bath.ac.uk/~jap/">Julian Padget</a>, University of Bath</td></tr>
+ <tr><td></td><td><a href="http://akira.ruc.dk/~mir/">Morten Rhiger</a>, Roskilde University</td></tr>
+ <tr><td></td><td><a href="http://websrv0a.sdu.dk/ups/">Ulrik Pagh Schultz</a>,  University of Southern Denmark</td></tr>
+ <tr><td></td><td><a href="http://www.kb.ecei.tohoku.ac.jp/~sumii/">Eijiro Sumii</a>, Tohoku University</td></tr>
+ <tr><td></td><td><a href="http://blog.scheme.dk/">Jens Axel S&oslash;gaard</a>, Vestjysk Gymnasium Tarm</td></tr>
+ <tr><td></td><td><a href="http://pleiad.dcc.uchile.cl/people/etanter/">Eric Tanter</a>, University of Chile</td></tr>
+
+   <tr><td/><td/></tr>
+   <tr>
+     <td style="width: 200px; "><b>Publicity Chair</b></td>
+     <td><a href="http://cs.au.dk/~zerny/">Ian Zerny</a>, Aarhus University</td>
+   </tr>
+    
+  
+  </table>
+
+
+ </div> <!-- /pc -->
+
+ 
+
+
+
+
+ </div> <!-- /contents -->
+
+
+
+</div> <!-- /container -->
+
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21336116-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

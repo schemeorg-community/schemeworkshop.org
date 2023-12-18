@@ -1,0 +1,88 @@
+> (for-papers)                                                ; call for papers
+
+			  2007 Workshop on Scheme and
+			    Functional Programming
+
+
+			 http://sfp2007.ift.ulaval.ca/
+		    Freiburg, Germany --- 30 September 2007
+
+The 2007 Scheme Workshop is a forum for discussing experience with and future
+development of the Scheme programming language.  The scope of the workshop
+includes all aspects of the design, implementation, theory, and application of
+Scheme.  We encourage everyone interested in Scheme to participate.
+
+This workshop forms part of the 2007 International Conference on Functional
+Programming (ICFP) as an associated, ACM SIGPLAN sponsored event.
+
+Topics of interest for technical papers include (but are not limited to):
+
+Design.  Language critiques and extensions, concurrency and distribution,
+     components and composition, language embedding, object systems, type
+     systems, exception handling, syntactic abstraction, module systems and
+     libraries, multiparadigm programming, scripting.
+
+Implementation.  Compilers, interpreters, runtime systems, virtual machines,
+     resource management, program analysis and transformation, partial
+     evaluation, compile-time and run-time optimization, foreign function and
+     operating system interfaces, embedded systems.
+
+Development tools.  Profilers, tracers, debuggers, program development
+     environments, program understanding tools, performance and conformance
+     test suites.
+
+Theory.  Formal semantics, correctness of analyses and transformations, lambda
+     calculus, continuations, program verification.
+
+Education.  Teaching Scheme, teaching with Scheme.
+
+Topics of interest for experience papers include (but are not limited to):
+
+Applications.  Domain-specific languages, graphical user interfaces, web
+     programming, network applications, multimedia programming, systems
+     programming, symbolic computing, large systems, use of Scheme as a
+     scripting language.
+
+Practice and experience.  Experience with Scheme in education and industry.
+
+Scheme pearls.  Elegant, instructive uses of Scheme.
+
+Experience papers need not necessarily report original research results; they
+may instead report practical experience that will be useful to others,
+re-usable programming idioms, or elegant new ways of approaching a problem.
+The key criterion for such a paper is that it makes a contribution from which
+other practitioners can benefit.  It is not enough simply to describe a
+program!
+
+System Demonstrations.  Authors of both technical and experience papers are
+invited to describe, in an appendix, proposals for system demonstrations to be
+given during the workshop.
+
+Panel Discussions.  We also invite proposals for panel discussions on topics of
+interest to the Scheme community.  Authors of accepted proposals will give a
+brief presentation on the topic and then moderate the discussion that follows.
+
+For submission details, please see http://sfp2007.ift.ulaval.ca/.
+
+Program committee
+John Clements (Cal Poly)
+Danny Dubé, chairman (Laval University)
+Martin Gasbichler (Zühlke Engineering)
+Aubrey Jaffer (ClearMethods Inc.)
+Christian Queinnec (University Paris 6)
+Chung-chieh Shan (Rutgers University)
+
+                              Steering committee
+                              William D. Clinger (Northeastern University)
+                              Marc Feeley (University of Montréal)
+                              Robby Findler (University of Chicago)
+                              Dan Friedman (Indiana University)
+                              Christian Queinnec (University Paris 6)
+                              Manuel Serrano (INRIA Sophia Antipolis)
+                              Olin Shivers (Northeastern University)
+                              Mitchell Wand (Northeastern University)
+
+  Submission deadline    June 22, 2007
+  Author notification    August 3, 2007
+  Final paper due        September 7, 2007
+  Workshop               September 30, 2007

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <title>Scheme Workshop 2009</title>
+    <meta name="generator" content="DrScheme" />
+    <script type="text/javascript" src="niftycube.js"> </script>
+    <script type="text/javascript">window.onload=function(){ Nifty("div#mainbox div"); }</script>
+  </head>
+  <body>
+    <div id="RealBody">
+      <div>
+        <div id="Content">
+          <div id="TitleLine">
+            <h1>Scheme and Functional Programming 2009, Preliminary Program</h1>
+            <h2>August 22, 2009</h2>
+            <h3>Cambridge, Massachusetts</h3>
+          </div>
+          <div id="mainbox">
+            <div>
+              <h3>Casey Klein and Robert Bruce Findler</h3>
+              <h3>Randomized Testing in PLT Redex</h3>
+              <p>This paper presents new support for randomized testing in PLT Redex, a
+domain-specific language for formalizing operational semantics. In
+keeping with the overall spirit of Redex, the testing support is as
+lightweight as possible—Redex programmers simply write down
+predicates that correspond to facts about their calculus and the tool
+randomly generates program expressions in an attempt to falsify the
+predicates. Redex's automatic test case generation begins with simple
+expressions, but as time passes, it broadens its search to include
+increasingly complex expressions. To improve test coverage, test
+generation exploits the structure of the model's metafunction and
+reduction-relation definitions.</p>
+              <p>The paper also reports on a case-study applying Redex's testing
+support to the latest revision of the Scheme standard. Despite a
+community review period, as well as a comprehensive,
+manually-constructed test suite, Redex's random test case generation
+was able to identify several bugs in the semantics.</p>
+            </div>
+            <div>
+              <h3>Eric Tanter</h3>
+              <h3>Higher-Order Aspects in Order</h3>
+            </div>
+            <div>
+              <h3>Andrew W. Keep, Michael D. Adams, Lindsey Kuper, William E. Byrd and Daniel P. Friedman</h3>
+              <h3>A pattern-matcher for alphaKanren -or- How to get into trouble with CPS macros</h3>
+              <p>CPS macros written using Scheme's <i>syntax-rules</i> macro system allow for easier 
+composition of macros and control over the order of macro expansion. We identify a limitation of CPS macros when used 
+to generate bindings from a non-unique list of user-specified identifiers.  Implementing a pattern matcher for the Kanren 
+family of relational programming languages revealed this limitation.  Identifiers come from the pattern, and repetition 
+indicates that the same variable binding should be used.  Using a CPS macro, binding is delayed until after the comparisons 
+are performed.  This may cause free identifiers that are symbolically equal to be conflated, even when they are introduced 
+by different parts of the source program.  After expansion, this leaves some identifiers unbound that should be bound.  
+In our first solution, we use syntax-case with <i>bound-identifier=?</i> to correctly compare the delayed bindings.  
+Our second solution uses eager binding with <i>syntax-rules</i>, which requires abandoning CPS macros when discovering new identifiers.</p>
+            </div>
+            <div>
+              <h3>William D Clinger</h3>
+              <h3>Scalable Garbage Collection with Guaranteed MMU</h3>
+            </div>
+            <div>
+              <h3>Carl Eastlund and Matthias Felleisen</h3>
+              <h3>Sequence Traces for Object-Oriented Executions</h3>
+            </div>
+            <div>
+              <h3>Mehmet Fatih Köksal, Remzi Emre Başar, Suzan Üsküdarlı</h3>
+              <h3>Screen-Replay: A Session Recording and Analysis Tool for DrScheme</h3>
+              <p>Approaches to teaching "Introduction to Programming" vary considerably.  However, two broad 
+categories may be considered: product oriented vs process oriented. Whereas, in the former the final product is most 
+significant, in the latter the process for achieving the final product is also considered very important. Process 
+oriented programming courses strive to equip students with good programming habits. In such courses, assessment 
+is challenging since it requires the observation of how students develop their programs. Conventional methods 
+and tools that assess final products are not adequate for such observation.</p>
+              <p>This paper introduces a tool for non-intrusive observation of program development process. 
+This tool is designed to support the process oriented approach of "How to Design Programs" (HtDP) and is 
+implemented for the DrScheme environment. The design, implementation and utility of this tool is described with examples.</p>
+            </div>
+            <div>
+              <h3>Matthew Flatt and Eli Barzilay</h3>
+              <h3>Keyword and Optional Arguments in PLT Scheme</h3>
+              <p>The 'lambda' and procedure-application forms in PLT Scheme support
+arguments that are tagged with keywords, instead of identified by
+position, as well as optional arguments with default values. Unlike
+previous keyword-argument systems for Scheme, a keyword is not
+self-quoting as an expression, and keyword arguments use a different
+calling convention than non-keyword arguments. Consequently, a keyword
+serves more reliably (e.g., in terms of error reporting) as a
+lightweight syntactic delimiter on procedure arguments. Our design
+requires no changes to the PLT Scheme core compiler, because 'lambda'
+and application forms that support keywords are implemented by macros
+over conventional core forms that lack keyword support.</p>
+            </div>
+            <div>
+              <h3>Aaron W. Hsu</h3>
+              <h3>Descot: Distributed Code Repository Framework</h3>
+            </div>
+            <div>
+              <h3>Matthew Might and Tarun Prabhu</h3>
+              <h3>Interprocedural Dependence Analysis of Higher-Order Programs via Stack Reachability</h3>
+            </div>
+            <div>
+              <h3>Eli Barzilay</h3>
+              <h3>The Scribble Reader: An Alternative to S-expressions for Textual Content</h3>
+              <p> For decades, S-expressions have been one of the fundamental
+ advantages of languages in the Lisp family—a major factor in
+ shaping these languages as an ideal platform for symbolic
+ computations, including meta-programming and much more.</p>
+              <p>As convenient as this minimalist syntax may be, it is highly
+ inconvenient for dealing with textual content.  In this paper we
+ describe the reader used by Scribble—the PLT Scheme
+ documentation system.  The reader implements a syntax that is easy
+ to use, uniform and meshes well with the Scheme philosophy.  The
+ syntax makes "here-strings" and string interpolation easy, yet it is
+ more powerful than a combination of the two.</p>
+            </div>
+            <div>
+              <h3>Remzi Emre Başar, Caner Derici, Çağdaş Şenol</h3>
+              <h3>World With Web: A compiler from world applications to Javascript</h3>
+            </div>
+            <div>
+              <h3>John Moore</h3>
+              <h3>Get stuffed: Tightly packed abstract protocols in Scheme</h3>
+            </div>
+            <div>
+              <h3>Anthony Cowley</h3>
+              <h3>Distributed Software Transactional Memory</h3>
+            </div>
+            <div>
+              <h3>Abdulaziz Ghuloum and R. Kent Dybvig</h3>
+              <h3>Fixing Letrec (reloaded)</h3>
+            </div>
+            <div>
+              <h3>Olivier Danvy</h3>
+              <h3>Peter J Landin (1930-2009)</h3>
+            </div>
+          </div>
+          <div class="centerdiv">
+            <p>built using <a href="http://www.plt-scheme.org">PLT Scheme</a> and <a href="http://www.html.it/articoli/niftycube/index.html">NiftyCube</a> and <a href="http://continue.cs.brown.edu/">Continue</a>. Thanks!</p>
+            <p>want to see the <a href="./home.ss">source code</a>?</p>
+          </div>
+        </div>
+        <div id="Footer">last updated: Monday, July 20th, 2009 10:58:38am</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+  
+                        2003 Scheme Workshop
+                         Friday, November 7
+                       Northeastern University
+                        Boston, Massachusetts
+
+                   http://scheme2003.flux.utah.edu/
+
+        >>> Registration is now open at the above web address <<<
+
+
+ * Registration is free.
+
+ * Accepted papers are listed below and on the web site.
+
+ * In addition to paper presentations, the workshop will include
+   invited demos of Scheme-based systems (to be announced). 
+
+ * A substantial portion of the workshop will be devoted to discussion
+   on the future of Scheme (i.e., standardization).
+
+------------------------------------------------------------------------
+ Purpose
+------------------------------------------------------------------------
+
+The purpose of the 2003 Scheme Workshop is to discuss experience with
+and future developments of the Scheme programming language ---
+including the future of Scheme standardization --- as well as general
+aspects of computer science loosely centered on the general theme of
+Scheme.
+
+------------------------------------------------------------------------
+ Accepted papers, in no particular order
+------------------------------------------------------------------------
+
+ PLoT Scheme 
+   Alexander Friedman and Jamie Raymond 
+
+ PICBIT: A Scheme System for the PIC Microcontroller 
+   Marc Feeley and Danny Dube 
+
+ From Python to PLT Scheme 
+   Philippe Meunier, Daniel Silva 
+
+ Dot-Scheme: A PLT Scheme FFI for the .NET framework 
+   Pedro Pinto 
+
+ How to Add Threads to a Sequential Language Without Getting Tangled Up 
+   Martin Gasbichler, Eric Knauel, Michael Sperber, and Richard Kelsey 
+
+ Unwind-protect in portable Scheme 
+   Dorai Sitaram 
+
+ Well-Shaped Macros 
+   Ryan Culpepper, and Matthias Felleisen 
+
+ Porting Scheme Programs 
+   Dorai Sitaram 
+
+ Enabling Complex UI In Web Applications With send/suspend/dispatch 
+   Peter Walton Hopkins 
+
+------------------------------------------------------------------------
+ Invited Demos
+------------------------------------------------------------------------
+
+To be announced
+
+------------------------------------------------------------------------
+ Scheme Standardization
+------------------------------------------------------------------------
+
+Agenda to appear
+
+------------------------------------------------------------------------
+ Organizers
+------------------------------------------------------------------------
+
+Program committee:
+
+    Robert Bruce Findler (University of Chicago)
+    Matthew Flatt (University of Utah)
+    Erick Gallesio (University of Nice)
+    Tim Hickey (Brandeis University)
+    Mario Latendresse (FNMOC)
+    Jeffrey Mark Siskind (Purdue University)
+    Mitchell Wand (Northeastern University)
+
+Steering committee:
+
+    William D. Clinger (Northeastern University)
+    Marc Feeley (University of Montreal)
+    Matthias Felleisen (Northeastern University)
+    Dan Friedman (Indiana University)
+    Christian Queinnec (University Paris 6)
+    Manuel Serrano (INRIA)
+    Olin Shivers (Georgia Institute of Technology)
+    Mitchell Wand (Northeastern University)

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>Scheme '14 :: 2014 Scheme and Functional Programming Workshop</title>
+<link rel="icon" type="image/x-icon" href="Lambda_lc.ico">
+<link rel="shortcut icon" type="image/x-icon" href="Lambda_lc.ico">
+<style>
+/* CSS reset */
+
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+
+<style>
+
+div#contents ul{
+  list-style: circle ;
+  margin-left: 20px ;
+}
+
+div#contents ol{
+  list-style: decimal ;
+  margin-left: 20px ;
+}
+
+div#contents ol li {
+  margin-top: 15px ;
+}
+
+div#contents li {
+  margin-left: 20px; 
+}
+
+a {
+ text-decoration: none ;
+}
+
+p {
+ margin-bottom: 15px ;
+}
+
+body {
+ padding-top: 10px ;
+ font-family: Palatino, Optima, Calibri, Tahoma, Helvetica, Arial, Georgia ;
+ background-color: #cccccc ;
+ background-repeat: no-repeat ;
+ color: #282828 ;
+}
+
+div.module {
+ float: left ;
+ border: 1px solid #777777;
+ -moz-border-radius: 6px ;
+ -webkit-border-radius: 6px ;
+ border-radius: 6px ;
+ background-color: #eeeeee ;
+ margin: 10px ;
+ padding: 20px ;
+}
+
+div.main-unit {
+ width: 400px;
+}
+
+div.unit {
+ width: 620px;
+ padding: 40px; 
+}
+
+div#container{
+ margin-left: auto ;
+ margin-right: auto ;
+ width: 780px;
+ padding: 0px;
+}
+
+div#contents {
+ margin-left: auto ;
+ margin-right: auto ;
+ width: 780px;
+ padding: 0px;
+}
+
+div#main {
+ width: 440px ;
+ float: left ;
+ padding: 0px;
+ margin: 0px ;
+}
+
+div#header {
+ /* color: #ffffff ; */
+ /* height: 50px; */
+ /* background-image: url(sanjose-night2.png) ; */
+ padding-top: 10px ;
+}
+
+
+div#navbar {
+ float: left ;
+ width: 200px ;
+}
+
+h2 {
+ text-align: center ;
+ font-size: 115% ;
+ margin-bottom: 20px ;
+}
+
+h3 {
+  margin-bottom: 15px ;
+}
+
+div#main td {
+ padding-right: 10px ;
+}
+
+div#header-area {
+ float: left;
+ width: 380px;
+}
+
+div#header-title {
+ float: left;
+ font-size: 44px;
+}
+
+div#header-subtitle {
+ float: left;
+ margin-left: 10px;
+ font-size: 18px;
+ margin-top: 4px;
+}
+
+div#fcrc-notice {
+ float: left ;
+ width: 370px ;
+ font-weight: bold ;
+ margin-left: 3px ;
+ font-size: 14px ;
+}
+
+div#fcrc-notice a {
+ color: blue ;
+}
+
+td {
+ padding-bottom: 6px ;
+}
+
+div#navbar h2 {
+ margin-bottom: 10px ;
+}
+
+h2.important {
+ color: #ff3333 ;
+}
+
+div.schedule {
+ padding-left: 20px ;
+}
+
+table.schedule td {
+  border: 1px solid black ;
+  padding: 10px ;
+}
+
+IMG.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+
+<!--[if gte IE 6]>
+<style>
+div#header {
+ color: black ;
+ background-image: url(not-found.jpg) ;
+ height: 120px ;
+}
+
+div#header-area {
+ margin-top: 5px ;
+ float: none ;
+ height: 110px ;
+ display: block ;
+}
+
+div#header-title {
+ float: none ;
+ font-size: 44px;
+ height: 50px ;
+ display: block ;
+}
+
+div#header-subtitle {
+ float: none ;
+ height: 50px ;
+ display: block ;
+ font-size: 18px;
+ margin-top: 4px;
+ margin-left: 0px ;
+}
+
+div#fcrc-notice {
+ float: none;
+ display: block ;
+ width: 370px ;
+ font-size: 100% ; 
+ font-weight: bold ;
+ color: black ;
+ margin-left: 0px;
+}
+
+
+div#fcrc-notice a {
+ color: blue ;
+}
+
+</style>
+<![endif]-->
+
+
+
+</head>
+
+<body>
+
+<div id="container">
+
+
+ <div id="navbar" class="module">
+   
+   <h2 class="important">Important dates</h2>
+
+   <table>
+
+     <tbody>
+       <tr>
+	 <td>Full papers:</td>
+	 <td>&nbsp;</td>
+	 <td><strike>5&nbsp;Sept&nbsp;2014</strike></td>
+       </tr>
+       <tr>
+	 <td>&nbsp;</td>
+	 <td>&nbsp;</td>
+	 <td><b>12&nbsp;Sept&nbsp;2014</b></td>
+       </tr>
+
+       <tr>
+	 <td>Notification:</td>
+	 <td>&nbsp;</td>
+	 <td><b>10&nbsp;Oct&nbsp;2014</b></td>
+       </tr>
+       <tr>
+	 <td>Camera-ready:</td>
+	 <td>&nbsp;</td>
+	 <td><b>24&nbsp;Oct&nbsp;2014</b></td>
+       </tr>
+       <tr>
+	 <td>Workshop:</td>
+	 <td>&nbsp;</td>
+	 <td>19&nbsp;Nov&nbsp;2014</td>
+       </tr>
+       <tr>
+	 <td colspan= 3>Deadlines are 23:59 (UTC-12)</td>
+       </tr>
+     </tbody>
+   </table>
+   
+  <br>
+
+   <h2 class="important">Important links</h2>
+   <ul>
+    <li>
+      <strike>Workshop Registration</strike>
+    </li>
+    <br />
+    <li>
+      <strike>Hotel Room Reservation</strike>
+    </li>
+    <br />
+    <li>
+      <strike>Paper submission</strike> (closed)
+    </li>
+    <br />
+    <li><a href="http://www.twitter.com/schemeworkshop/">@schemeworkshop</a></li>
+   </ul>
+
+
+   <!-- <br> -->
+
+
+
+   <!-- <ul> -->
+
+   <!-- </ul> -->
+   
+ </div>
+
+
+ <div id="main">
+
+ <div id="header" class="module main-unit">
+
+   <div id="header-area" style="">
+
+     <div id="header-title"><b>Scheme '14</b></div>
+
+     <div id="header-subtitle">
+         <b>19 November 2014</b>
+         <br>
+	 <b>Conference Theater</b>
+	 <br>
+	 <b><a href="http://grandwashington.hyatt.com/en/hotel/home.html">Grand Hyatt Washington</a></b>
+	 <br>
+	 <b>1000 H Street NW</b>
+	 <br>
+         <b>Washington, D.C.</b>
+     </div>
+
+
+     <div id="fcrc-notice">
+       <br />In conjunction with <a href="http://clojure-conj.org/">Clojure/conj</a>
+     </div>
+     
+   </div>
+
+
+ </div> <!-- /header -->
+
+ <div id="definition" class="module main-unit">
+  <b>Scheme '14</b> is the annual <a href="http://www.schemeworkshop.org/">Scheme and Functional Programming Workshop</a>.
+  <p>
+ </div>
+ 
+ <div id="news" class="module main-unit">
+   <h2> News </h2>
+   <ul>
+     <li> The <a href="IndianaCSTR718.pdf">Scheme '14 proceedings</a> are now available (also from the University of Indiana as CS Techreport 718)</li>
+     <li> &nbsp; </li>
+     <li> Thanks everyone for a wonderful Scheme '14</li>
+     <li> &nbsp; </li>
+     <li> Scheme '14 program and papers have been posted</li>
+     <li> &nbsp; </li>
+     <li> <a href="http://wingolog.org">Andy Wingo</a> will be presenting the keynote. Andy is known, among other things, for being one of the maintainers of <a href="http://www.gnu.org/software/guile">Guile Scheme</a>.</li>
+     <li> &nbsp; </li>
+     <li> <a href="http://www.ccil.org/~cowan">John Cowan</a>, the chair of <a href="http://scheme-reports.org/2012/working-group-2.html">R7RS Working Group 2</a>, will be giving an update on their progress.</li>
+     <!---<li> &nbsp; </li>
+     <li> By request, the submission deadline has been extended to <a href="http://www.timeanddate.com/countdown/generic?iso=20140912T2359&p0=3926&msg=Revised+Scheme+%2714+Paper+Submission"><b> September 12, 23:59 (UTC-12) </b></a> </li>--->
+   </ul>
+ </div>
+ 
+ </div> <!-- /main -->
+ 
+
+ <div id="contents" style="float: left; width: 725px; ">
+
+
+
+ <!-- <div id="news" class="module unit"> -->
+
+ <!-- <h2>News</h2> -->
+
+ <!-- <ul> -->
+ <!-- </ul> -->
+ <!-- </div>  -->
+ <div id="program" class="module unit">
+
+   <h2>Program</h2>
+
+    <p>
+   Download all accepted papers: 
+   [<a href="papers.zip">papers.zip</a>]
+   </p>
+   
+   <table>
+
+   <tbody><tr>
+   <td style="width: 4em;">8:00</td>
+   <td>Registration</td>
+   </tr>
+
+   <tr>
+   <td style="width: 4em;">8:55</td>
+   <td>Welcome/opening remarks
+     <p> </p></td>
+   </tr>
+   
+   <tr>
+   <td colspan="2">
+   <center><b>Session 1 (R7 Scheming)</b> <br> Chair: Jason Hemann </center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>9:00</td>
+   <td>Invited Talk: <i>R7RS Update</i>
+   <br>
+   John Cowan     
+   <br> 
+     Slides: [<a href="slides/Cowan2014.pdf">pdf</a>] 
+     <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td>9:30</td>
+   <td>
+   <i>Implementing R7RS on an R6RS Scheme system</i>
+   <br>
+   Authors: Takashi Kato
+
+   <br>
+   Paper: [<a href="papers/Kato2014.pdf">pdf</a>]
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr style="color: grey;">
+   <td style="width: 4em;">9:55</td>
+   <td>Break
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td colspan="2">
+   <center><b>Session 2 (Scheme Implementation)</b> <br> Chair: Andy Keep </center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>10:30</td>
+   <td><i>Code Versioning and Extremely Lazy Compilation of Scheme</i>
+   <br>
+   Authors: Baptiste Saleil and Marc Feeley
+
+   <br>
+    Paper: [<a href="papers/Saleil2014.pdf">pdf</a>]
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td>10:55</td>
+   <td>
+   <i>Microscheme: Functional programming for the Arduino</i>
+   <br>
+   Authors: Ryan Suchocki and Sara Kalvala
+
+   <br>
+   Paper: [<a href="papers/Suchocki2014.pdf">pdf</a>]
+   <p> </p>
+   </td>
+   </tr>
+
+<!--
+   <tr style="color: grey;">
+   <td style="width: 4em;">11:05</td>
+   <td>Break</td>
+   </tr>
+-->
+
+   <tr>
+   <td>11:20</td>
+   <td>
+   <i>Structure Vectors and their Implementation</i>
+   <br>
+   Authors:  Benjamin C&eacute;rat and Marc Feeley
+   <br>
+   Paper: [<a href="papers/Cerat2014.pdf">pdf</a>]
+   <p> </p>
+   </tr>
+   
+   <tr style="color: grey;">
+   <td style="width: 4em;">11:45</td>
+   <td>Lunch Break
+   <p> </p>
+   </td>
+   </tr>
+   
+   <tr>
+   <td colspan="2">
+   <center><b>Session 3 (Static Analysis)</b><br> Chair: Paul Steckler </center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>2:00</td>
+   <td>
+   <i>A Linear Encoding of Pushdown Control-Flow Analysis</i>
+   <br>   
+   Authors: Steven Lyde, Thomas Gilray and Matthew Might
+   <br>
+   Paper: [<a href="papers/Lyde2014.pdf">pdf</a>]
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td>2:25</td>
+   <td>
+   <i>Concrete and Abstract Interpretation: Better Together</i>
+   <br>
+   Authors: Maria Jenkins, Leif Andersen, Thomas Gilray and Matt Might
+   <br>
+   Paper: [<a href="papers/Jenkins2014.pdf">pdf</a>]
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr style="color: grey;">
+   <td style="width: 4em;">2:50</td>
+   <td>Break
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td colspan="2">
+   <center><b>Session 4 (Domain-specific Languages)</b> <br> Chair: John Clements</center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>3:15</td>
+   <td>
+   <i>Little Languages for Relational Programming</i>
+   <br>
+   Authors: Daniel Brady, Jason Hemann and Daniel P. Friedman
+   <br>
+   Paper: [<a href="papers/Brady2014.pdf">pdf</a>]
+   <p> </p>
+   </td>
+   </tr>
+
+
+   <tr>
+   <td>3:40</td>
+   <td>
+
+   <i>Meta-Meta-Programming: Generating C++ Template Metaprograms with Racket Macros</i>
+   <br>
+   Authors: Michael Ballantyne, Chris Earl and Matthew Might
+   <br>
+   Paper: [<a href="papers/Ballantyne2014.pdf">pdf</a>]
+
+   <p> </p>
+   </td>
+   </tr>
+
+   <tr>
+   <td colspan="2">
+   <center><b>Keynote</b></center>
+   </td>
+   </tr>
+
+   <tr>
+   <td style="width: 4em;">4:05</td>
+   <td>Keynote: <i>What Scheme Can Learn from Javascript</i>
+     <br> Andy Wingo
+     <br> 
+     Slides: [<a href="slides/Wingo2014.pdf">pdf</a>] 
+   </td>
+   </tr>
+
+   
+   <tr>
+   <td colspan="2">
+   <center><b>After Hours Event</b></center>
+   </td>
+   </tr>
+
+   <tr>
+   <td>8:30</td>
+   <td>
+   <em>Programming Enthusiasts Unite for Great Justice!</em><br>
+   Mingle with Schemers and Clojurers, and talk about Lispy things!
+   <br>
+   Mezzanine Lounge,
+   <a href="http://capcitybrew.com/index.php">Capitol City Brewing Company, 1100 New York Ave.</a>
+   </td>
+   </tr>
+
+   </tbody></table>
+
+ </div>
+
+ <div id="topics" class="module unit">
+
+   <h2>Topics</h2>
+
+<p>
+Submissions related to Scheme and functional programming are welcome
+and encouraged. Topics of interest include but are not limited to:
+</p>
+
+<ul>
+  <li>Program-development environments, debugging, testing</li>
+  <li>Implementation (interpreters, compilers, tools, benchmarks, etc)</li>
+  <li>Syntax, macros, hygiene
+  <li>Distributed computing, concurrency, parallelism</li>
+  <li>Interoperability with other languages, FFIs</li>
+  <li>Continuations, modules, object systems, types</li>
+  <li>Theory, formal semantics, correctness</li>
+  <li>History, evolution and standardization of Scheme</li>
+  <li>Applications, experience and industrial uses of Scheme</li>
+  <li>Education</li>
+  <li>Scheme pearls (elegant, instructive uses of Scheme)</li>
+</ul>
+
+<br />
+
+<p>
+<b>We also welcome submissions related to dynamic or multiparadigmatic languages and programming techniques.</b>
+</p>
+   
+ </div> <!-- /topics -->
+
+ <div id="submission" class="module unit" style="display: block;">
+
+ <h2>Submission requirements</h2>
+  
+<p>
+  
+ </p><p>
+Submissions must be in ACM proceedings format, 10-point type.
+
+Microsoft Word and LaTeX templates for this format are available at:
+
+</p><div style="text-align: center; margin-bottom: 15px;">
+<a href="http://www.acm.org/sigs/sigplan/authorInformation.htm">http://www.acm.org/sigs/sigplan/authorInformation.htm</a>
+</div>
+
+<p></p>
+
+<p>
+Submissions should be in PDF and printable on US Letter.
+</p>
+
+To encourage authors to submit their best work, this year we are
+encouraging shorter papers (around 6 pages, excluding references).
+This is to allow authors to submit longer, revised versions of their
+papers to archival conferences or journals.  Longer papers (10--12
+pages) are also acceptable, if the extra space is needed. There is no
+maximum length limit on submissions, but good submissions will likely
+be in the range of 6 to 12 pages.
+
+<b></b>
+
+</p>
+
+<p>
+  Proceedings will be printed as an Indiana University Technical Report.
+</p>
+
+<p> 
+
+Publication of a paper at this workshop is not intended to replace 
+conference or journal publication, and does not preclude re-publication 
+of a more complete or finished version of the paper at some later 
+conference or in a journal.
+
+</p>
+
+ </div>
+
+ <div id="location" class="module unit">
+
+   <h2>Location</h2>
+
+   <b>Workshop</b> <!-- (8:00 am --  whenever)<br> -->
+   Conference Theater, <a href="http://grandwashington.hyatt.com/en/hotel/home.html">Grand Hyatt Washington</a>, 1000 H Street NW, Washington, DC<br>
+   <p> </p>
+   
+   <b>After-hours event:</b> <!-- (8:30 pm -- whenever)<br> -->
+   <em>Programming Enthusiasts Unite for Great Justice!</em><br>
+   Mezzanine Lounge, <a href="http://capcitybrew.com/index.php">Capitol City Brewing Company</a>, 1100 New York Ave. NW, Washington, DC
+
+ </div>
+
+
+ <div id="sponsors" class="module unit">
+
+   <h2>Sponsors</h2>
+   <center>
+   <table>
+     <tbody>
+     <tr>
+       <td><img class="displayed" src="Beckman-Coulter-logo.png" alt="Beckman Coulter logo" height="125"></td>
+       <td>&emsp;&emsp;&emsp;</td>
+       <td><img class="displayed" src="Cisco_logo.png" alt="Cisco logo" height="125"></td>
+     </tr>
+     </tbody>
+   </table>
+   <br>
+   <img class="displayed" src="soic-300x152.png" alt="SOIC logo" height="160">
+   </center>
+
+ </div>
+ 
+
+<div id="organizers" class="module unit">
+
+ <table>
+   <tbody>
+     <tr>
+       <td><b>Program Committee</b></td>
+       <td><b>Steering Committee</b></td>
+     </tr>       
+     <tr>
+       <td><a href="http://michaeldadams.org/">Michael Adams</a>, University of Utah</td>
+       <td><a href="http://www.ccs.neu.edu/home/will/">Will Clinger</a>, Northeastern University</td>
+     </tr>
+     <tr>
+       <td><a href="http://webyrd.net/">Will Byrd</a>, University of Utah</td>
+       <td><a href="http://www.iro.umontreal.ca/~feeley/">Marc Feeley</a>, Université de Montréal</td>
+     </tr>
+     <tr>
+       <td><a href="http://www.ccs.neu.edu/home/stchang/">Stephen Chang</a>, Northeastern University</td>
+       <td><a href="http://www.cs.indiana.edu/~dfried/">Dan Friedman</a>, Indiana University</td>
+     </tr>
+     <tr>
+       <td style="width: 350px;"><a href="http://www.brinckerhoff.org/clements/home/">John Clements</a>, Cal Poly State University <b>(chair)</b></td>
+       <td><a href="http://www.ccs.neu.edu/home/shivers/">Olin Shivers</a>, Northeastern University</td>
+     </tr>
+     <tr>
+       <td>Chris Earl, University of Utah</td>
+       <td><a href="http://www.ccs.neu.edu/home/wand/">Mitch Wand</a>, Northeastern University</td>
+     </tr>
+     <tr>
+       <td><a href="http://www.cl.cam.ac.uk/~keg29/">Kathy Gray</a>, University of Cambridge</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td><a href="http://hemann.pl/">Jason Hemann</a>, Indiana University <b>(organizer)</b></td>
+       <td></td>
+     </tr>
+     <tr>
+       <td><a href="http://www.ccs.neu.edu/home/pnkfelix/">Felix Klock II</a>, Mozilla</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td><a href="http://www.cs.tufts.edu/~nr/">Norman Ramsey</a>, Tufts University</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td><a href="http://www.ccs.neu.edu/home/pauls/">Paul Stansifer</a>, Northeastern University</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>Paul Steckler, San Jose, CA</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td><a href="http://www.ccs.neu.edu/home/wand/">Mitch Wand</a>, Northeastern University</td>
+       <td></td>
+     </tr>
+
+  </tbody></table>
+
+
+ </div> <!-- /pc -->
+
+ 
+
+
+
+
+ </div> <!-- /contents -->
+
+
+
+</div> <!-- /container -->
+
+
+
+
+<script src="Scheme&#32;2014&#32;_&#32;Workshop&#32;on&#32;Scheme&#32;and&#32;Functional&#32;Programming_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21336116-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+</body>
+</html>

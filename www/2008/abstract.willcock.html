@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="William D Clinger"/>
+
+<title>
+Abstract:
+Tabled execution in Scheme (Scheme Pearl)
+</title>
+<link type="text/css"
+      rel="stylesheet"
+      href="sw2008.css"/>
+
+</head>
+
+<body>
+
+<h2>
+Tabled execution in Scheme (Scheme Pearl)
+</h2>
+
+<p>
+Jeremiah Willcock, Andrew Lumsdaine, Daniel Quinlan
+</p>
+
+<table class="narrow">
+  <tr>
+    <td>
+Tabled execution is a generalization of memoization developed by the
+logic programming community.  It not only saves results from tabled
+predicates, but also stores the set of currently active calls to them;
+tabled execution can thus provide meaningful semantics for programs
+that seemingly contain infinite recursions with the same arguments.
+In logic programming, tabled execution is used for many purposes, both
+for improving the efficiency of programs, and making tasks simpler and
+more direct to express than with normal logic programs.  However,
+tabled execution is only infrequently applied in mainstream functional
+languages such as Scheme.  We demonstrate an elegant implementation of
+tabled execution in Scheme, using a mix of continuation-passing style
+and mutable data.  We also show the use of tabled execution in Scheme
+for a problem in formal language and automata theory, demonstrating
+that tabled execution can be a valuable tool for Scheme users.
+    </td>
+  </tr>
+  <tr>
+    <td>
+LLNL-ABS-405521. This work performed under the auspices of the U.S. 
+Department of Energy by Lawrence Livermore National Laboratory under 
+Contract DE-AC52-07NA27344.  The project 07-ERD-057 was funded by the 
+Laboratory Directed Research and Development Program at LLNL.
+    </td>
+  </tr>
+</table>
+
+<hr/>
+
+<p>
+Last updated 23 July 2008.
+</p>
+
+<hr />
+
+<p>
+    <a href="http://validator.w3.org/check/referer"><img
+       style="border:0;width:88px;height:31px"
+       src="http://www.w3.org/Icons/valid-xhtml10-blue"
+       alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="William D Clinger"/>
+
+<title>
+Abstract:
+    Towards compatible and interderivable semantic specifications...,
+    part I...
+</title>
+<link type="text/css"
+      rel="stylesheet"
+      href="sw2008.css"/>
+
+</head>
+
+<body>
+
+<h2>
+    Towards compatible and interderivable semantic specifications
+    for the Scheme programming language, part I: abstract machines,
+    natural semantics, and denotational semantics.
+</h2>
+
+<p>
+Olivier Danvy
+</p>
+
+<table class="narrow">
+  <tr>
+    <td>
+      We derive two big-step abstract machines, a natural semantics,
+      and the valuation function of a denotational semantics based
+      on the small-step abstract machine for Core Scheme presented
+      by Clinger at PLDI'98.  Starting from a functional
+      implementation of this small-step abstract machine,
+      (1) we fuse its transition function with its driver loop,
+      obtaining the functional implementation of a big-step
+      abstract machine;
+      (2) we adjust this big-step abstract machine so that it is
+      in defunctionalized form, obtaining the functional
+      implementation of a second big-step abstract machine;
+      (3) we refunctionalize this adjusted abstract machine,
+      obtaining the functional implementation of a natural
+      semantics in continuation style; and
+      (4) we closure-unconvert this natural semantics,
+      obtaining a compositional continuation-passing
+      evaluation function which we identify as the
+      functional implementation of a denotational semantics
+      in continuation style.  We then compare this valuation
+      function with that of Clinger's original denotational
+      semantics of Scheme.
+    </td>
+  </tr>
+</table>
+
+<hr/>
+
+<p>
+Last updated 23 July 2008.
+</p>
+
+<hr />
+
+<p>
+    <a href="http://validator.w3.org/check/referer"><img
+       style="border:0;width:88px;height:31px"
+       src="http://www.w3.org/Icons/valid-xhtml10-blue"
+       alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+
+</body>
+</html>

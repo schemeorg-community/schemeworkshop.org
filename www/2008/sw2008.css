@@ -1,0 +1,137 @@
+/* alternative fonts */
+/* Verdana, Arial, sans-serif; */
+/* Georgia, "Times New Roman", Times, serif; */
+
+body           { background-color: #e8e8f0; 
+                 background-image: url(acmlite.gif);
+		 font-family:  Georgia, "Times New Roman", Times, serif; 
+	         font-size: 12pt;
+	         margin: 10%;
+                 }
+
+body {min-width:640px}
+
+hr {
+        width: 100%;
+        height: 2px;
+}
+
+p {
+        font-size: 13pt;
+}
+
+table {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 100%;
+        border-width: thin thin thin thin;
+        cellpadding: 2;
+        cellspacing: 2;
+}
+
+tdx {
+        background-color: #e8e8f0; 
+        font-family:  Georgia, "Times New Roman", Times, serif; 
+        font-size: 12pt;
+        margin: 3%;
+        margin-left: 5px;
+	border-width: thin thin thin thin;
+	padding: 4px 4px 4px 4px;
+	border-style: solid solid solid solid;
+	border-color: #8080a0 #8080a0 #8080a0 #8080a0;
+	background-color: #f4f4ff;
+}
+
+code {font-size: 12pt;}
+
+pre     {font-size: 11pt; background-color: #e0e0e8;}
+
+address {font-size: 10pt;}
+
+/* put some padding after each li */
+
+li {
+        font-size: 13pt;
+        padding-top: 2pt;
+        padding-bottom: 2pt
+}
+
+h1 {
+        padding: 0px; margin: 0px 0px 5px 0px;
+        font-size: 14pt;
+        font-weight: bold;
+}
+
+h2 {
+        padding: 0px; margin: 0px 0px 5px 0px;
+        font-size: 14pt;
+        font-weight: bold;
+}
+
+h3 {
+        padding: 0px; margin: 0px 0px 5px 0px;
+        font-size: 13pt;
+        font-weight: bold;
+}
+
+h4 {
+        padding: 0px; margin: 0px 0px 5px 0px;
+        font-size: 13pt;
+        font-weight: bold;
+}
+
+/* classes */
+
+.acmlogo { width: 10%;
+           height: 95px;
+           text-align: center;
+           vertical-align: top;
+}
+
+.bulletin { color: #ff0000 }
+
+.center  { text-align: center; }
+
+.darker  { background-color: #d0d0d8; }
+
+.heading { width: 80%;
+           text-align: center;
+           vertical-align: top;
+           font-size: 18pt;
+           font-weight: bold;
+}
+
+.indented {
+          width: 90%;
+          font-size: 13pt;
+}
+
+.narrow { width: 640px;
+          font-size: 13pt;
+}
+
+.subhead { width: 80%;
+           text-align: center;
+           vertical-align: top;
+           font-size: 14pt;
+           font-weight: bold;
+}
+
+.nobreak { white-space: nowrap; }
+
+.top     { margin-top: 0px; }
+
+/* divs */
+
+#banner {padding: 5px;}
+
+#menu {float:left; width:20%}
+
+#content {float:right; padding: 0px 10px; width:75%}
+
+#quotation {padding: 10px;
+            margin-left: 20px;
+            width:80%; background-color: #eeeed0}
+
+#footer {clear:both}

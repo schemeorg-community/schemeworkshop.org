@@ -1,0 +1,146 @@
+body {
+  background: white;
+}
+
+div.draft {
+  background: #ff0; 
+  border: 1px solid #f00; 
+  font-size: 2em; 
+  text-align: center; 
+  padding: 10px; margin: 12px;
+}
+
+p.affiliation {
+  font-size: 1.5em; 
+  font-family: verdana, arial, helvetica, sans-serif; 
+  text-align: right;
+}
+
+strong.title {
+  font-size: 1.75em;
+  font-family: verdana, arial, helvetica, sans-serif; 
+  line-height: 1em;
+}
+
+div.indent {
+  margin-left: +1.5em;
+  margin-right: +1.5em;
+}
+
+div.subtitle {
+  font-size: 1.25em;
+  font-family: verdana, arial, helvetica, sans-serif; 
+  line-height: 1.125em;
+  margin-top: .675em;
+}
+
+span.papertype {
+  foo-font-style: italic;
+  text-decoration: underline;
+}
+
+td.indent {
+  padding-right: 1.5em;
+}
+
+h2.vskip {
+  margin-top: 2em;
+  margin-bottom: 0em;
+  line-height: 2.125em;
+  border-top: 1px solid #000;
+}
+
+h3 {
+  margin-bottom: .5em;
+}
+
+a.person {
+  text-decoration: none;
+}
+
+ul.mylist {
+  margin-left: 0em;
+}
+
+li.mylist {
+  margin-left: 0em;
+  margin-bottom: .5em;
+}
+
+dl {
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0em;
+  margin-bottom: .5em;
+}
+
+span.standout {
+  font-weight: bold;
+}
+  
+
+
+
+table.ugly00 {
+  height: 4em;
+  color:#000;
+  text-align: left;
+}
+
+h2.vskip-ugly {
+  margin-top: 2em;
+  background: #f6f3ff;
+  border-top: 1px solid #f000;
+  border-bottom: 1px solid #f000;
+}
+
+
+table.ugly00 {
+  height: 4em;
+  background: #f6f3ff;
+  color:#000;
+  text-align: left;
+}
+
+table.ugly0 {
+  height: 4em;
+  foobackground: #48409f;
+  background: #0e0480;
+  barbackground: #140b83;
+  color:#fff;
+  text-align: left;
+}
+
+table.ugly3 {
+  background: #180e85;
+  font-size: 2em;
+  height: 2.5em;
+  color: #fff;
+}
+
+table.ugly4 {
+  background: #d5d2e9;
+  font-size: 2em;
+  height: 2.5em;
+  color: #180e85;
+}
+
+foobody {
+foobackground: #eae7ff;
+barbackground: #f5f2ff;
+background: #f6f3ff;
+}
+
+table.ugly1 {
+  background: #6666cc;
+  font-size: 2em;
+  height: 2.5em;
+  color:#fff;
+  text-align: center;
+}

@@ -1,0 +1,293 @@
+** 2014, fifteenth workshop (Washington, DC)
+=============================================
+Organizer: Jason Hemann
+co-located with Clojure/conj
+
+** 2013, fourteenth workshop (Washington, DC)
+=============================================
+9 submissions, 7 accepted
+Organizer: William Byrd
+attendance: 34 officially attended 
+   (a few more from Clojure/conj came in the afternoon)
+co-located with Clojure/conj
+
+Program Committee
+  William E. Byrd, University of Utah
+  Nada Amin, EPFL
+  Ryan Culpepper, Northeastern University
+  Cormac Flanagan, UC Santa Cruz
+  Ronald Garcia, University of British Columbia
+  Noah Goodman, Stanford
+  Dave Herman, Mozilla Research
+  Andrew W. Keep, University of Utah
+  Julia Lawall, INRIA/LIP6
+  Jacob Matthews, Google
+  David Nolen, New York Times
+
+** 2012, thirteenth workshop (Copenhagen, Denmark)
+===============================================
+?? sumbissions, 9(?) appear on the web site program
+Organizer: Olivier Danvy
+attendance: 38 total (26 early registration, 12 late)
+co-located with ICFP
+
+Program Committee
+  Olivier Danvy, Aarhus University
+  Michael Adams, PSU
+  Stéphane Ducasse, INRIA Lille Nord Europe
+  Christopher Dutchyn, University of Saskatchewan
+  Suresh Jagannathan, Purdue University
+  Julia L. Lawall, INRIA
+  Florian Loitsch, Google
+  Jay McCarthy, Brigham Young University
+  Kurt Nørmark, Aalborg University
+  Julian Padget, University of Bath
+  Morten Rhiger, Roskilde University
+  Ulrik Pagh Schultz, University of Southern Denmark
+  Eijiro Sumii, Tohoku University
+  Jens Axel Søgaard, Vestjysk Gymnasium Tarm
+  Eric Tanter, University of Chile
+Publicity Chair
+  Ian Zerny, Aarhus University
+
+** 2011, twelfth workshop (Portland, OR, USA)
+=============================================
+9 submissions, 8 accepted, 7 presented (one withdrawn)
+Organizer: Matt Might
+attendance: 63
+co-located with OOPSLA
+
+Program Committee
+  Matt Might, Utah
+  Michael Adams, Indiana University
+  Ryan Culpepper, University of Utah
+  Marc Feeley, Université de Montréal
+  Ron Garcia, Carnegie Mellon University
+  David Herman, Mozilla Research
+  Felix Klock, Adobe
+  Jay McCarthy, Brigham-Young University
+  Jan Midtgaard, Aarhus University
+  Manuel Serrano, INRIA Sophia-Antipolis
+  Sam Tobin-Hochstadt, Northeastern University
+  David Van Horn, Northeastern University
+
+** 2010, eleventh workshop (Montreal, Canada)
+=============================================
+8 submissions, 8 accepted
+Organizer: Marc Feeley
+attendance: 59
+
+
+** 2009, tenth workshop (Boston, MA, USA)
+=============================================
+18 submissions, 15 accepted
+Organizer: John Clements
+attendance: 60
+attendance fee: $40
+co-located with MitchFest
+
+costs:
+  Catering: $1675.90
+  Printing: $660.35
+  Insurance: $161.75
+  Misc (bottled water & name tags): $20
+  Room fee: $2000 (paid by Northeastern, not registration fee)
+
+** 2008, ninth workshop (Victoria, British Columbia, Canada)
+=============================================
+9 submissions, 9 accepted
+attendance: 24 
+  acm members: 9, non-members: 8, student: 6, vip: 1
+  early 17: late: 7 
+Organizer: Will Clinger
+
+** 2007, eighth workshop (Freiburg, Germany)
+=============================================
+18 submissions, 13 accepted
+attendance: 44 (acm members: 14 regular: 13 students: 17)
+Organizer: Danny Dubé
+
+** 2006, seventh workshop (Portland, OR)
+==========================================
+17 submissions, 16 accepted, 1 withdrawn
+attendance: 59 registered 
+  20 ACM members
+  21 non-ACM members
+  17 students
+  1 VIP (invited speaker)
+
+Organizer: Robby Findler
+
+** 2005, sixth workshop (Tallinn, Estonia)
+==========================================
+11 submitted papers, 10 accepted
+attendance: 30
+15 (11 early, 4 late) ACM registrants, 
+8 (1 early, 7 late) non-ACM registrants, 
+7 (4 early, 3 late) students.
+
+1410 EUR total taken in.
+
+http://www.deinprogramm.de/scheme-2005/
+2005/9/24
+Organizers: J. Michael Ashley and Michael Sperber
+
+Program Committee:
+  J. Michael Ashley (Beckman Coulter, Inc) 
+  Martin Gasbichler (University of Tubingen) 
+  Jonathan Rees (Millennium Pharmaceuticals) 
+  Dorai Sitaram (Verizon) 
+  Jonathan Sobel (SAS Institute)
+  Michael Sperber (DeinProgramm)
+
+** 2004, fifth workshop (Snowbird, Utah)
+==============================================
+?? papers submitted, 11 accepted, 
+plus report from the R6RS committee 
+
+attendance: 39 or 40(?)
+fees: 
+  ACM/SIGPLAN Member
+    By 25 August: $60
+    After 25 August: $100
+  Non-member
+    By 25 August: $70
+    After 25 August: $110
+  Student
+    By 25 August: $60
+    After 25 August: $100
+
+budget info: (This budget info is not the actual costs, but
+the estimated costs from before the workshop)
+
+(A) Number of attendees: 30
+*** Variable Cost ***
+(B) Food/person
+Continental Breakfast & breaks          18.00
+Lunch                                   18.00
+Subtotal                                36.00
+         + 7% tax                        2.52
+        + 20% admin. Fee                 7.20
+            ==================================
+         = total cost food/person       45.72
+(C) Basic service fee/person            10.00
+(D) Variable cost/person (B+C)          55.72/person 
+(E)    Total variable cost (D*A):     1671.60
+*** Fixed Cost **
+(F) Cost of proceedings or notes:      415.00
+(G) Cost of audio/video         
+        Meeting Support Package         75.00
+        Power                           15.00   
+        + 7% tax                         6.30   
+        + 20% admin. fee                18.00
+        ======================================
+= total cost audio/video               114.30
+(H) Cost of meeting room                
+        room cost                      175.00  
+        + 7% tax                        12.25  
+           ===================================
+= total room cost                      187.25  
+(I) Total fixed cost (F + G + H)       716.55
+(K) Total expense (E+I):              2388.15
+(L) Registration Fee for ACM and/or SIGPLAN members (> K/A):  $80  
+    (Rounded up from K/A = 79.60)
+(M) Registration Fee for non-members (L + $10):  $ 90
+(N) Total Income (A*L): $ 2400
+(O) Profit (N-K): 11.85
+
+http://www.cs.indiana.edu/scheme2004/
+2004/9/22
+
+Organizers: Olin Shivers and Oscar Waddell
+
+Program Committee:
+  J. Michael Ashley (Beckman Coulter, Inc.)
+  Danny Dube (Universite Laval)
+  Robert Bruce Findler (University of Chicago)
+  Richard Kelsey (Ember Corporation)
+  Julia Lawall (University of Copenhagen)
+  Michael Sperber (DeinProgramm)
+  Olin Shivers (Georgia Institute of Technology)
+  Oscar Waddell (Abstrax, Inc.)
+
+** 2003, fourth workshop
+========================
+12 papers submitted, 9 accepted, 
+plus 3 demos and a panel on Scheme standardization
+
+attendance: 80
+fees: free
+budget info: 80 * price-of-a-box-lunch, donated by Matthias Felleisen
+
+http://scheme2003.flux.utah.edu/
+2003/11/7
+Organizer: Matthew Flatt
+
+Program Committee:
+  Robert Bruce Findler (University of Chicago)
+  Erick Gallesio (Universite de Nice)
+  Tim Hickey (Brandeis University)
+  Mario Latendresse (FNMOC)
+  Jeffrey Mark Siskind (Purdue University)
+  Mitchell Wand (Northeastern University)
+
+** 2002, third workshop (Pittsburgh)
+====================================
+16 submitted papers, 9 accepted (plus one invited talk).
+Attendance: 41
+	    student	member	nonmember	total
+    early	11	16	2		29
+    late	 2	 4	6		12
+    total	13	20	8		41
+
+fees: ??
+budget info: ??
+
+http://scheme2002.ccs.neu.edu/
+2002/10/3
+Organiser: Olin Shivers
+Program Committee:
+  Alan Bawden (Brandeis) 
+  Olivier Danvy (University of Aarhus) 
+  Richard Kelsey (Ember Corp.) 
+  Brad Lucier (Purdue University) 
+  Paul Steckler (Northeastern University) 
+  Andrew Wright (Aleri) 
+
+** 2001, second workshop (Florence, Italy)
+==========================================
+14 submitted papers, 9 accepted.
+26 registrants for the workshop; ?? actual attendees
+
+fees: ??
+budget info: ??
+
+2001/9/2
+http://kaolin.unice.fr/Scheme2001/
+Organiser: Manuel Serrano
+Program Committee:
+  William D Clinger, Northeastern University 
+  Matthew Flatt, University of Utah 
+  Christian Queinnec, Université Pierre et Marie Curie, Paris 
+  Manuel Serrano, Université de Nice (general chair) 
+  Michael Sperber, Universitat Tubingen 
+  Pierre Weis, INRIA-Rocquencourt 
+
+** 2000, first workshop (Montreal, Canada)
+==========================================
+17 papers submitted, 11 accepted (a mix of "short" and "long" papers).
+49 attendees
+
+fees: ??
+budget info: ??
+
+2000/9/17
+http://www.ccs.neu.edu/~matthias/Scheme2000/
+Organiser: Matthias Felleisen
+Program Committee:
+  Kent Dybvig (Indiana University)
+  Marc Feeley (Universite de Montreal)
+  Matthias Felleisen (Rice University)
+  Daniel Friedman (Indiana University)
+  Manuel Serrano, (Universite de Nice (Sophia-Antipolis))
+  Olin Shivers (Massachusetts Institute of Technology)

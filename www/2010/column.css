@@ -1,0 +1,200 @@
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	width:100%;
+	min-width:600px;
+	background: #aaa;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font: normal small Arial, Helvetica, sans-serif;
+	line-height: 140%;
+}
+
+h1, h2, h3 {
+	margin:.8em 0 0 0;
+	line-height: 35px;
+}
+
+h2 {
+	margin-bottom:20px;
+}
+
+p {
+	margin:.4em 0 .8em 0;
+	padding:0;
+}
+
+#header {
+	clear:both;
+	width:85%;
+	margin-left:auto;
+	margin-right:auto;
+	border-right: 3px solid #8c8c8c;
+	border-left: 3px solid #8c8c8c;
+}
+
+.whited {
+  border:10px solid #FFFFFF;
+  background-color: #748899;
+  overflow: hidden;
+}
+
+#header h1 {
+        padding:20px 10px 0px;
+	margin-bottom:10px;
+	color: #FFFFFF;
+	margin-bottom:20px;
+}
+
+#header h2 {
+        padding:20px 10px 10px;
+	margin-bottom:10px;
+	color: #FFFFFF;
+	margin-bottom:20px;
+}
+
+/* column container */
+.colmask {
+	position:relative; /* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	margin-left:auto;
+	margin-right:auto;
+	width:85%; /* width of whole page */
+	overflow:hidden; /* This chops off any overhanging divs */
+	background-color:#ffffff;
+	border-right: 3px solid #8c8c8c;
+	border-left: 3px solid #8c8c8c;
+
+}
+/* common column settings */
+.colleft {
+	float:left;
+	width:100%;
+	position:relative;
+	margin-top:20px;
+}
+.col1, .col2 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;
+	overflow:hidden;
+}
+
+/* 2 Column (left menu) settings */
+.leftmenu {
+	background:#FFFFFF;		/* right column background colour */
+}
+.leftmenu .colleft {
+	right:75%;			/* right column width */
+}
+.leftmenu .col1 {
+	width:71%;			/* right column content width */
+	left:102%;			/* 100% plus left column left padding */
+}
+.leftmenu .col2 {
+    /* left column content width (column width minus left and right padding) */
+    width:21%;
+    /* (right column left and right padding) plus (left column left padding) */
+    left:6%;
+}
+ul.hidden {
+    list-style:none;
+}
+
+li.roomy {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+a.navigation {
+    text-decoration:none;
+    font-size:120%;
+    font-weight:bolder;
+}
+
+p.navigation {
+    text-decoration:none;
+    font-size:120%;
+    font-weight:bolder;    
+}
+
+/* Footer styles */
+#footer {
+	clear:both;
+	width:85%;
+	margin-right:auto;
+	margin-left:auto;
+	background-color: #0078b4;
+	border-right: 3px solid #8c8c8c;
+	border-left: 3px solid #8c8c8c;
+	color: #FFFFFF;
+}
+
+.left {
+	float:left;
+	margin-left: 10px;
+}
+
+.right {
+	float:right;
+	margin-right: 10px;
+}
+
+a {
+  text-decoration:none;
+}
+
+a.footer-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+img.logo {
+    vertical-align: middle;
+    width: 100%;
+    border: 0px;
+    margin-bottom:20px;
+    float:left;
+}
+
+img.baltimore { 
+    border: 0px;
+    float:center;
+}
+
+p.credit {
+  font-size:75%;
+  text-align:center;  
+}
+
+.photo {
+    float:center;
+}
+
+.album{
+}
+.album .imageSingle {
+  float: left; 
+  margin: 15px; 
+  width: 306px; 
+  text-align: center; 
+  border: solid 1px #333
+}
+.album .imageSingle .image {
+  width: 300px; 
+  margin: 3px;
+}
+.album .footer {
+  text-align: center;
+  width: 306px; 
+  border-top: solid 1px #333; 
+  color: #999; 
+  font-weight: bold; 
+  padding-top: 7px; 
+  padding-bottom: 7px; 
+  margin-top: 10px;
+}
