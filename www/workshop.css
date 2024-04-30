@@ -6,9 +6,3 @@
 .sf-font-style {
     font-family: Georgia, serif;
 }
-
-div#lowerleft {
-    position:absolute;
-    right:10;
-    bottom:10;
-}
