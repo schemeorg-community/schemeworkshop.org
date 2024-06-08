@@ -3,4 +3,4 @@ set -eu
 cd "$(dirname "$0")"
 cd ..
 set -x
-rsync -vcr www/ tuonela.scheme.org:/production/workshop/www/
+rsync -vcr --exclude="*~" www/ tuonela.scheme.org:/production/workshop/www/
