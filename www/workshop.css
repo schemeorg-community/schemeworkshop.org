@@ -1,8 +1,31 @@
 .font-style {
-    font-family: Verdana, 'Lucida Sans Unicode', 'Lucida Grande',
-                 Arial, Helvetica, sans-serif;
+  font-family: Verdana, 'Lucida Sans Unicode', 'Lucida Grande',
+               Arial, Helvetica, sans-serif;
 }
-
+.home {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+}
+.home td {
+  padding: 0.25em;
+}
+#latest-year {
+  font-size: 250%;
+  margin-top: 1em;
+  text-align: center;
+}
+#past-years {
+  font-size:120%;
+  text-align: right;
+}
 .sf-font-style {
-    font-family: Georgia, serif;
+  font-family: Georgia, serif;
+}
+#steering-committee {
+  text-align: right;
+}
+#swfp-name {
+  font-size: 300%;
 }
