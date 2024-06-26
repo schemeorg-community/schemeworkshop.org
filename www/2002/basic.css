@@ -1,0 +1,47 @@
+a:link {
+color: #ff0000;
+}
+a:visited {
+color: #cc6666;
+}
+a:active {
+color: #996666;
+}
+body {
+font-family: times, times-roman, serif;
+color: #993300;
+font-size: 11pt;
+background-color: #fff8dc;
+margin-left: 5pt;
+margin-right: 36pt;
+}
+.pagecounter {
+visibility: hidden;
+}
+h1 {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 24pt;
+color: #993300;
+}
+h2 {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 14pt;
+font-style: italic;
+color: #993300;
+}
+h3 {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 12pt;
+color: #993300;
+}
+.collophon {
+font-size: 80%;
+font-style: italic;
+text-align: right;
+}
+pre {
+font-size: 10pt;
+}
