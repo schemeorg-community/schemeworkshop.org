@@ -1,0 +1,16 @@
+#+TITLE: How to update schemeworkshop.org
+
+After installing [[https://practical-scheme.net/gauche/][Gauche Scheme]], run:
+
+#+begin_src sh
+scripts/generate.sh
+#+end_src
+
+Then push to [[https://www.schemeworkshop.org/][schemeworkshop.org]]:
+
+#+begin_src sh
+scripts/upload-www.sh
+#+end_src
+
+You must have SSH access to ~tuonela.scheme.org~.  [[mailto:schemeworkshop4aag@speechcode.com][Arthur A. Gleckler]]
+can give you access.
